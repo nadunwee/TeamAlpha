@@ -7,9 +7,10 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about-us" },
   { name: "Our Partners", href: "/partners" },
-  { name: "Driving Force", href: "#" },
+  { name: "Driving Force", href: "/driving-force" },
   { name: "Merch", href: "#" },
   { name: "FAQ", href: "#" },
+  { name: "Scavenger Hunt", href: "#" },
 ];
 
 const NavigationBar = () => {
