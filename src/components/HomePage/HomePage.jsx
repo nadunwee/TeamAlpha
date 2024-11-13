@@ -44,7 +44,7 @@ export default function HomePage() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              Announcing our Merch Pack{" "}
+              Announcing our Merch Packk{" "}
               <a href="#" className="font-semibold text-indigo-600">
                 <span aria-hidden="true" className="absolute inset-0" />
                 Get it now <span aria-hidden="true">&rarr;</span>
