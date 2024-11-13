@@ -59,7 +59,7 @@ export default function HomePage() {
             transition={{ delay: 0.4 }}
           >
             <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-              The Creed is calling… will you heed it
+              The Creed is calling… will you heed itttt
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
