@@ -5,6 +5,7 @@ import {
 } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion"; // Import motion from framer-motion
 import NavigationBar from "../NavigationBar";
+import sliitLogo from "../../assets/sliitLogo.png";
 
 const AboutUs = () => {
   return (
@@ -42,6 +43,112 @@ const AboutUs = () => {
         </svg>
       </div>
 
+      {/* First Section */}
+      <motion.div
+        className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div className="lg:pr-4 flex items-center">
+            <div className="lg:max-w-lg">
+              <motion.p
+                className="text-base/7 font-semibold text-indigo-600"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                Deploy faster
+              </motion.p>
+              <motion.h1
+                className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+              >
+                About SLIIT
+              </motion.h1>
+              <motion.p
+                className="mt-6 text-xl/8 text-gray-700"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.4 }}
+              >
+                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
+                sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
+                id at vitae feugiat egestas.
+              </motion.p>
+            </div>
+          </div>
+        </div>
+        <motion.div
+          className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
+          initial={{ x: 100 }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 100 }}
+        >
+          <img
+            alt=""
+            src={sliitLogo}
+            className=" h-[350px] max-w-[350px] rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+          />
+        </motion.div>
+      </motion.div>
+
+      {/* Second Section */}
+      <motion.div
+        className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {/* Invert order for second section */}
+        <motion.div
+          className="lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 100 }}
+        >
+          <img
+            alt=""
+            src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
+            className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+          />
+        </motion.div>
+        <div className="lg:col-start-2 lg:row-start-1 lg:mx-auto lg:w-full lg:max-w-7xl lg:px-8">
+          <div className="lg:max-w-lg">
+            <motion.p
+              className="text-base/7 font-semibold text-indigo-600"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              Collaborate effectively
+            </motion.p>
+            <motion.h2
+              className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+            >
+              About Rotaract
+            </motion.h2>
+            <motion.p
+              className="mt-6 text-xl/8 text-gray-700"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+            >
+              At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at
+              vitae feugiat egestas. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit.
+            </motion.p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* thrid section */}
       <motion.div
         className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10"
         initial={{ opacity: 0 }}
@@ -65,7 +172,7 @@ const AboutUs = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                A better workflow
+                About SLIIT
               </motion.h1>
               <motion.p
                 className="mt-6 text-xl/8 text-gray-700"
@@ -92,43 +199,56 @@ const AboutUs = () => {
             className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
           />
         </motion.div>
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-          <div className="lg:pr-4">
-            <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-              >
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                Id dolor praesent donec est. Odio penatibus risus viverra tellus
-                varius sit neque erat velit. Faucibus commodo massa rhoncus,
-                volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
-              </motion.p>
-              <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                <motion.li
-                  className="flex gap-x-3"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.6 }}
-                >
-                  <CloudArrowUpIcon
-                    aria-hidden="true"
-                    className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Push to deploy.
-                    </strong>{" "}
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Maiores impedit perferendis suscipit eaque, iste dolor
-                    cupiditate blanditiis ratione.
-                  </span>
-                </motion.li>
-              </ul>
-            </div>
+      </motion.div>
+
+      {/* forth section */}
+      <motion.div
+        className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {/* Invert order for second section */}
+        <motion.div
+          className="lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 100 }}
+        >
+          <img
+            alt=""
+            src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
+            className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+          />
+        </motion.div>
+        <div className="lg:col-start-2 lg:row-start-1 lg:mx-auto lg:w-full lg:max-w-7xl lg:px-8">
+          <div className="lg:max-w-lg">
+            <motion.p
+              className="text-base/7 font-semibold text-indigo-600"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              Collaborate effectively
+            </motion.p>
+            <motion.h2
+              className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+            >
+              About Rotaract
+            </motion.h2>
+            <motion.p
+              className="mt-6 text-xl/8 text-gray-700"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+            >
+              At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at
+              vitae feugiat egestas. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit.
+            </motion.p>
           </div>
         </div>
       </motion.div>
