@@ -3,17 +3,11 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const WhatIsTeamAlpha = () => {
-  const links = [
-    { name: "Open roles", href: "#" },
-    { name: "Internship program", href: "#" },
-    { name: "Our values", href: "#" },
-    { name: "Meet our leadership", href: "#" },
-  ];
   const stats = [
-    { name: "Offices worldwide", value: 12 },
-    { name: "Full-time colleagues", value: 300 },
-    { name: "Hours per week", value: 40 },
-    { name: "Paid time off", value: "Unlimited" },
+    { name: "Activities", value: 12 },
+    { name: "Days", value: 2 },
+    { name: "Partners", value: 40 },
+    { name: "Deligates", value: 200 },
   ];
 
   const CountUp = ({ end }) => {
@@ -73,9 +67,10 @@ const WhatIsTeamAlpha = () => {
             What Is Team Alpha
           </h2>
           <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat.
+            Team Alpha is a team-building event by the Rotaract Club of SLIIT,
+            aimed at inspiring leadership, teamwork, and growth among Sri Lankan
+            youth by combining challenging activities, professional insights,
+            and lasting memories, fostering camaraderie and resilience.
           </p>
         </motion.div>
 
@@ -85,14 +80,6 @@ const WhatIsTeamAlpha = () => {
           transition={{ delay: 1, duration: 0.8 }}
           className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none"
         >
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-            {links.map((link) => (
-              <a key={link.name} href={link.href}>
-                {link.name} <span aria-hidden="true">&rarr;</span>
-              </a>
-            ))}
-          </div>
-
           <motion.dl
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}

@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "assassinCreed";
+    src: url("./assets/fonts/Assassin.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Ensures text is visible while font is loading */
+  }
+}

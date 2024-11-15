@@ -4,6 +4,9 @@ import NavigationBar from "../NavigationBar";
 import HomePagePartners from "./HomePagePartners";
 import WhatIsTeamAlpha from "./WhatIsTeamAlpha";
 import backgroundImg from "../../assets/newback.png";
+import { useEffect, useState } from "react";
+import CountDown from "./CountDown";
+import Footer from "../Footer/Footer";
 
 export default function HomePage() {
   return (
@@ -66,12 +69,11 @@ export default function HomePage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+            <h1 className="text-balance text-5xl  font-semibold tracking-tight text-white sm:text-7xl">
               The Creed is calling… will you heed it
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-slate-100 sm:text-xl/8">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
+              <CountDown /> until team alpha
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <motion.a
@@ -105,8 +107,9 @@ export default function HomePage() {
         </motion.div>
       </motion.div>
 
-      <WhatIsTeamAlpha />
       <HomePagePartners />
+      <WhatIsTeamAlpha />
+      <Footer />
     </div>
   );
 }
