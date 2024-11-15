@@ -78,19 +78,11 @@ const Partners = () => {
       <NavigationBar />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-lg font-semibold text-gray-900">
-          Out Title Partners
+          Our Title Partners
         </h2>
         <div className="mt-10 overflow-hidden">
-          <motion.div
-            className="flex space-x-8 w-[calc(158px*8)]"
-            animate={{ x: ["0%", "-100%"] }}
-            transition={{
-              duration: 15,
-              ease: "linear",
-              repeat: Infinity,
-            }}
-          >
-            {[...logos, ...logos].map((logo, index) => (
+          <motion.div className="flex space-x-8 justify-center w-[calc(158px*8)] mx-auto">
+            {logos.map((logo, index) => (
               <img
                 key={index}
                 src={logo.src}

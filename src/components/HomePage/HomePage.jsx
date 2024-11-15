@@ -3,10 +3,18 @@ import DrivingForce from "../DrivingForce";
 import NavigationBar from "../NavigationBar";
 import HomePagePartners from "./HomePagePartners";
 import WhatIsTeamAlpha from "./WhatIsTeamAlpha";
+import backgroundImg from "../../assets/newback.png";
 
 export default function HomePage() {
   return (
-    <div className="bg-white">
+    <div
+      style={{
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+      className="bg-white"
+    >
       <NavigationBar />
 
       <motion.div
@@ -39,7 +47,7 @@ export default function HomePage() {
         >
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <motion.div
-              className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+              className="relative rounded-full px-3 py-1 text-sm/6 text-white ring-1 ring-gray-900/10 hover:ring-gray-900/20"
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -58,10 +66,10 @@ export default function HomePage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-              The Creed is calling… will you heed itttt
+            <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+              The Creed is calling… will you heed it
             </h1>
-            <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+            <p className="mt-8 text-pretty text-lg font-medium text-slate-100 sm:text-xl/8">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
               lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
             </p>
