@@ -164,30 +164,30 @@ const DrivingForce = () => {
   };
 
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white py-12 sm:py-16 lg:py-24">
       <NavigationBar />
-      <div className="flex flex-col items-center gap-12">
+      <div className="flex flex-col items-center gap-12 px-4 sm:px-8 lg:px-16">
         {Object.entries(categories).map(([category, people]) => (
           <motion.div
             key={category}
-            className="w-full text-center"
+            className="w-full"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
           >
             {/* Category Title */}
             <motion.h2
-              className="text-2xl font-bold mb-8"
+              className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 lg:mb-12 text-center"
               variants={itemVariants}
             >
               {category}
             </motion.h2>
             {/* People Cards */}
-            <div className="flex justify-center gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
               {people.map((person) => (
                 <motion.div
                   key={person.name}
-                  className="group relative w-40 h-40 rounded-lg overflow-hidden shadow-lg"
+                  className="group relative w-full h-40 sm:h-48 lg:h-56 rounded-lg overflow-hidden shadow-lg"
                   variants={itemVariants}
                 >
                   {/* Image */}
@@ -198,7 +198,7 @@ const DrivingForce = () => {
                   />
                   {/* Hover effect */}
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white text-lg font-semibold">
+                    <span className="text-white text-sm sm:text-base lg:text-lg font-semibold">
                       {person.name}
                     </span>
                   </div>
