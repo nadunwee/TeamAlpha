@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import whatIsAlpha from "../../assets/whatIsAlpha.png";
 
 const WhatIsTeamAlpha = () => {
   const stats = [
@@ -47,7 +48,7 @@ const WhatIsTeamAlpha = () => {
     >
       <img
         alt=""
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+        src={whatIsAlpha}
         className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
       />
 
@@ -63,18 +64,18 @@ const WhatIsTeamAlpha = () => {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="mx-auto max-w-2xl lg:mx-0"
         >
-          <h2 className="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
-            What Is Team Alpha
+          <h2 className="text-5xl font-semibold tracking-tight text-black sm:text-7xl font-assassin">
+            what is team alpha
           </h2>
-          <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
-            Team Alpha is a team-building event by the Rotaract Club of SLIIT,
-            aimed at inspiring leadership, teamwork, and growth among Sri Lankan
+          <p className="mt-8 text-[25px] font-bold text-slate-800 sm:text-[30px] font-assassin">
+            team alpha is a team-building event by the rotaract club of sliit,
+            aimed at inspiring leadership, teamwork, and growth among sri lankan
             youth by combining challenging activities, professional insights,
             and lasting memories, fostering camaraderie and resilience.
           </p>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 1, duration: 0.8 }}
@@ -99,7 +100,7 @@ const WhatIsTeamAlpha = () => {
               </div>
             ))}
           </motion.dl>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </div>
   );

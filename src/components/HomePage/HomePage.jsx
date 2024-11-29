@@ -3,7 +3,7 @@ import DrivingForce from "../DrivingForce";
 import NavigationBar from "../NavigationBar";
 import HomePagePartners from "./HomePagePartners";
 import WhatIsTeamAlpha from "./WhatIsTeamAlpha";
-import backgroundImg from "../../assets/newback.png";
+import backgroundImg from "../../assets/newback.jpg";
 import { useEffect, useState } from "react";
 import CountDown from "./CountDown";
 import Footer from "../Footer/Footer";
@@ -48,7 +48,7 @@ export default function HomePage() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+          {/* <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <motion.div
               className="relative rounded-full px-3 py-1 text-sm/6 text-white ring-1 ring-gray-900/10 hover:ring-gray-900/20"
               initial={{ y: -10, opacity: 0 }}
@@ -61,7 +61,7 @@ export default function HomePage() {
                 Get it now <span aria-hidden="true">&rarr;</span>
               </a>
             </motion.div>
-          </div>
+          </div> */}
 
           <motion.div
             className="text-center"
@@ -69,13 +69,15 @@ export default function HomePage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <h1 className="text-balance text-5xl  font-semibold tracking-tight text-white sm:text-7xl">
-              The Creed is calling… will you heed it
+            <h1 className="text-balance text-6xl font-semibold tracking-tight text-black sm:text-6xl font-assassin">
+              the creed is calling… <br />
+              will you heed it
             </h1>
-            <p className="mt-8 text-pretty text-lg font-medium text-slate-100 sm:text-xl/8">
-              <CountDown /> until team alpha
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="flex justify-center items-center gap-5 text-black text-center">
+              {/* <CountDown /> */}
+            </div>
+
+            {/* <div className="mt-10 flex items-center justify-center gap-x-6">
               <motion.a
                 href="#"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -86,7 +88,7 @@ export default function HomePage() {
               <a href="#" className="text-sm/6 font-semibold text-gray-900">
                 Learn more <span aria-hidden="true">→</span>
               </a>
-            </div>
+            </div> */}
           </motion.div>
         </motion.div>
 
@@ -107,9 +109,9 @@ export default function HomePage() {
         </motion.div>
       </motion.div>
 
-      <HomePagePartners />
+      {/* <HomePagePartners /> */}
       <WhatIsTeamAlpha />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

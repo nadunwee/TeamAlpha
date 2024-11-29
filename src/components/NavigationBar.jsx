@@ -3,26 +3,22 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import mobileNav from "../assets/mobileNav.png"; // Ensure correct path to the image
 
+// Navigation links
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About Us", href: "/about-us" },
-  { name: "Our Partners", href: "/partners" },
-  { name: "Driving Force", href: "/driving-force" },
-  { name: "Merch", href: "#" },
-  { name: "FAQ", href: "#" },
-  { name: "Scavenger Hunt", href: "#" },
+  { name: "home", href: "/" },
+  { name: "about us", href: "/about-us" },
 ];
 
 const NavigationBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  console.log(location);
-
+  // Determine the navigation link styles based on the current path
   let navClass = "text-sm font-semibold text-gray-300";
   if (location.pathname === "/") {
-    navClass = "text-sm font-semibold text-gray-300";
+    navClass = "text-sm font-semibold text-black";
   } else {
     navClass = "text-sm font-semibold text-black";
   }
@@ -40,7 +36,7 @@ const NavigationBar = () => {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <span className="text-gray-300 font-assassin text-4xl">
+            <span className="text-black font-assassin text-4xl">
               Team Alpha
             </span>
             {/* <img
@@ -54,22 +50,29 @@ const NavigationBar = () => {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-300"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black"
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-12 font-assassin text-6xl">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className={navClass}>
+            <a
+              key={item.name}
+              href={item.href}
+              className={`${navClass} text-[30px]`} // Add text-2xl here
+            >
               {item.name}
             </a>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold text-gray-300">
-            Register <span aria-hidden="true">&rarr;</span>
+          <a
+            href="#"
+            className="text-sm font-semibold text-black font-assassin text-[30px]"
+          >
+            register <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </nav>
@@ -81,17 +84,22 @@ const NavigationBar = () => {
             onClose={setMobileMenuOpen}
             className="lg:hidden"
           >
-            <div className="fixed inset-0 z-50" />
+            <div className="fixed inset-0 z-50 " />
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 100 }}
-              className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gradient-to-r from-[#8b0000] to-[#3a3b3c] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+              className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+              style={{
+                backgroundImage: `url(${mobileNav})`, // Apply the image URL directly
+                backgroundSize: "cover", // Ensures the image covers the container
+                backgroundPosition: "center", // Keeps the image centered
+              }}
             >
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Your Company</span>
+                  <span className="sr-only">team alpha</span>
                   <img
                     alt=""
                     src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
@@ -114,7 +122,7 @@ const NavigationBar = () => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700"
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[30px]"
                       >
                         {item.name}
                       </a>
@@ -123,9 +131,9 @@ const NavigationBar = () => {
                   <div className="py-6">
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-300 hover:bg-gray-700"
+                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[30px]"
                     >
-                      Log in
+                      register
                     </a>
                   </div>
                 </div>

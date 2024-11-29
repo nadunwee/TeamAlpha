@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import NavigationBar from "../NavigationBar";
+import DrivingForceBack from "../../assets/DrivingForceBack.png";
 
 const DrivingForce = () => {
   const categories = {
@@ -164,7 +165,10 @@ const DrivingForce = () => {
   };
 
   return (
-    <div className="bg-white py-12 sm:py-16 lg:py-24">
+    <div
+      className="bg-cover bg-center py-12 sm:py-16 lg:py-24"
+      style={{ backgroundImage: `url(${DrivingForceBack})` }} // Replace with the actual image path
+    >
       <NavigationBar />
       <div className="flex flex-col items-center gap-12 px-4 sm:px-8 lg:px-16">
         {Object.entries(categories).map(([category, people]) => (
@@ -183,7 +187,7 @@ const DrivingForce = () => {
               {category}
             </motion.h2>
             {/* People Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
+            <div className="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
               {people.map((person) => (
                 <motion.div
                   key={person.name}
@@ -194,7 +198,7 @@ const DrivingForce = () => {
                   <img
                     src={person.imageUrl}
                     alt={person.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover "
                   />
                   {/* Hover effect */}
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
