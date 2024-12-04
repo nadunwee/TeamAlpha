@@ -49,12 +49,12 @@ const WhatIsTeamAlpha = () => {
 
           {/* Second Column: hello */}
           <motion.div className="grid grid-rows-2 gap-4 sm:test-[20px]">
-            <div className="bg-gray-200 p-4">
+            <div className="flex justify-center p-4">
               <p>
                 <img src={alphaLogo} alt="team-alpha-logo" className="w-72" />
               </p>
             </div>
-            <div className="bg-gray-300 p-4">
+            <div className=" p-4">
               <p>
                 <CountDown />
               </p>

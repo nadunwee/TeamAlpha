@@ -28,7 +28,7 @@ const CountDown = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg">
+    <div className="flex flex-col items-center p-6 bg-[#CDB898] rounded-lg shadow-lg">
       <h2 className="mb-4 text-2xl font-bold text-white uppercase tracking-wide border-b-4 border-white pb-2 font-assassin">
         Until the Brotherhood
       </h2>

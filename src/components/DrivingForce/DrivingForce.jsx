@@ -1,8 +1,19 @@
-import React from "react";
 import { motion } from "framer-motion";
 import NavigationBar from "../NavigationBar";
 import DrivingForceBack from "../../assets/DrivingForceBack.png";
 import lakshiImg from "../../assets/lakshiImg.png";
+import UdeepHeadshort from "../../assets/UdeepHeadshort.jpg";
+import ijasHeadshot from "../../assets/ijasHeadshot.jpg";
+import dinuriHeadshot from "../../assets/dinuriHeadshot.jpg";
+import afthahHeadshot from "../../assets/afthahHeadshot.jpg";
+import nadunHeadshot from "../../assets/nadunHeadshot.jpg";
+import senadiHeadshot from "../../assets/senadiHeadshot.jpg";
+import saviniHeadshot from "../../assets/saviniHeadshot.jpeg";
+import sarahHeadshot from "../../assets/sarahHeadshot.jpg";
+import hashiniHeadshot from "../../assets/hashiniHeadshot.jpg";
+import manithHeadshot from "../../assets/manithHeadshot.jpg";
+import rishiniHeadshot from "../../assets/rishiniHeadshot.jpg";
+import sheniseHeadshot from "../../assets/sheniseHeadshot.jpg";
 
 const DrivingForce = () => {
   const categories = {
@@ -29,24 +40,21 @@ const DrivingForce = () => {
       {
         name: "Shenise",
         role: "",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: sheniseHeadshot,
       },
     ],
     Finance: [
       {
         name: "Senadi",
         role: "Coordinator",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: senadiHeadshot,
       },
     ],
     "Coporate Partnership Team": [
       {
         name: "Sarah",
         role: "Coordinator",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: sarahHeadshot,
       },
       {
         name: "Dinadi",
@@ -59,58 +67,51 @@ const DrivingForce = () => {
       {
         name: "Rishini",
         role: "Coordinator",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: rishiniHeadshot,
       },
       {
         name: "Manith",
         role: "Member",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: manithHeadshot,
       },
       {
         name: "Dinuri",
         role: "Member",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: dinuriHeadshot,
       },
     ],
     "PR & IT Team": [
       {
         name: "Savini",
         role: "Coordinator",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: saviniHeadshot,
       },
       {
         name: "Hashini",
         role: "Member",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: hashiniHeadshot,
       },
       {
         name: "Aftha",
         role: "Member",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: afthahHeadshot,
+      },
+      {
+        name: "Nadun",
+        role: "Member",
+        imageUrl: nadunHeadshot,
       },
     ],
     "Participants Engagument Team": [
       {
-        name: "Ranudi",
-        role: "PR & IT",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      },
-      {
         name: "Iman",
-        role: "PR & IT",
+        role: "Coordinator",
         imageUrl:
           "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
       },
       {
-        name: "Sanduni",
-        role: "PR & IT",
+        name: "Ranudi",
+        role: "Member",
         imageUrl:
           "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
       },
@@ -119,14 +120,12 @@ const DrivingForce = () => {
       {
         name: "Ijas",
         role: "Coordinator",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: ijasHeadshot,
       },
       {
         name: "Udeep",
         role: "Member",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: UdeepHeadshort,
       },
     ],
   };
