@@ -41,7 +41,7 @@ const DrivingForce = () => {
           "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
       },
     ],
-    "CP (Coporate Partnership)": [
+    "Coporate Partnership Team": [
       {
         name: "Sarah",
         role: "Coordinator",
@@ -55,7 +55,7 @@ const DrivingForce = () => {
           "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
       },
     ],
-    RND: [
+    "Research And Development Team": [
       {
         name: "Rishini",
         role: "Coordinator",
@@ -75,7 +75,7 @@ const DrivingForce = () => {
           "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
       },
     ],
-    "PR & IT": [
+    "PR & IT Team": [
       {
         name: "Savini",
         role: "Coordinator",
@@ -95,7 +95,7 @@ const DrivingForce = () => {
           "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
       },
     ],
-    Deligates: [
+    "Participants Engagument Team": [
       {
         name: "Ranudi",
         role: "PR & IT",
@@ -115,7 +115,7 @@ const DrivingForce = () => {
           "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
       },
     ],
-    Logistics: [
+    "Logistics Team": [
       {
         name: "Ijas",
         role: "Coordinator",
