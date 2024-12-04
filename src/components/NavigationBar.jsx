@@ -9,6 +9,10 @@ import mobileNav from "../assets/mobileNav.png"; // Ensure correct path to the i
 const navigation = [
   { name: "home", href: "/" },
   { name: "about us", href: "/about-us" },
+  { name: "driving force", href: "/driving-force" },
+  { name: "board of officials", href: "/board-of-officials" },
+  { name: "contact us", href: "/contact-us" },
+  { name: "faq", href: "/faq" },
 ];
 
 const NavigationBar = () => {
@@ -18,9 +22,9 @@ const NavigationBar = () => {
   // Determine the navigation link styles based on the current path
   let navClass = "text-sm font-semibold text-gray-300";
   if (location.pathname === "/") {
-    navClass = "text-sm font-semibold text-black";
+    navClass = "text-[30px] font-semibold text-black";
   } else {
-    navClass = "text-sm font-semibold text-black";
+    navClass = "text-[30px] font-semibold text-black";
   }
 
   return (
@@ -69,8 +73,10 @@ const NavigationBar = () => {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="#"
-            className="text-sm font-semibold text-black font-assassin text-[30px]"
+            href="https://tripetto.app/run/3QUIZ3HBI8"
+            className="text-[30px] font-semibold text-black font-assassin"
+            target="_blank" // This will open the link in a new tab
+            rel="noopener noreferrer" // This is for security purposes, especially with _blank
           >
             register <span aria-hidden="true">&rarr;</span>
           </a>
@@ -122,7 +128,7 @@ const NavigationBar = () => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[30px]"
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[31px]"
                       >
                         {item.name}
                       </a>
@@ -130,8 +136,10 @@ const NavigationBar = () => {
                   </div>
                   <div className="py-6">
                     <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[30px]"
+                      href="https://tripetto.app/run/3QUIZ3HBI8"
+                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[31px]"
+                      target="_blank" // This will open the link in a new tab
+                      rel="noopener noreferrer" // This is for security purposes, especially with _blank
                     >
                       register
                     </a>

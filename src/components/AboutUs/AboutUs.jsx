@@ -1,181 +1,56 @@
 import { motion } from "framer-motion"; // Import motion from framer-motion
 import NavigationBar from "../NavigationBar";
 import sliitLogo from "../../assets/sliitLogo.png";
-import rotaractLogo from "../../assets/rotaract.png";
-import racsliitLogo from "../../assets/racsliitLogo.png";
-import aboutUsBack from "../../assets/aboutUsBack.png";
 
 const AboutUs = () => {
   return (
     <div
       className="relative isolate overflow-hidden bg-cover bg-center bg-no-repeat px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
-      style={{
-        backgroundImage: `url(${aboutUsBack})`,
-      }}
+      style={{ backgroundColor: "#CDB898" }}
     >
       <NavigationBar />
-      {/* <div className="absolute inset-0 -z-10 overflow-hidden">
-        <svg
-          aria-hidden="true"
-          className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
-        >
-          <defs>
-            <pattern
-              x="50%"
-              y={-1}
-              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
-              width={200}
-              height={200}
-              patternUnits="userSpaceOnUse"
-            >
-              <path d="M100 200V.5M.5 .5H200" fill="none" />
-            </pattern>
-          </defs>
-          <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
-            <path
-              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-              strokeWidth={0}
-            />
-          </svg>
-          <rect
-            fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"
-            width="100%"
-            height="100%"
-            strokeWidth={0}
-          />
-        </svg>
-      </div> */}
 
       {/* First Section */}
       <motion.div
-        className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-10"
+        className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-x-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-          <div className="lg:pr-4 flex items-center">
-            <div className="lg:max-w-lg">
-              <motion.h1
-                className="mt-2 text-pretty text-[70px] font-semibold tracking-tight text-gray-900 sm:text-[70px] font-assassin"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
-              >
-                what is sliit
-              </motion.h1>
-              <motion.p
-                className="text-[30px] text-slate-300 font-assassin"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.4 }}
-              >
-                sri lanka institute of information technology is a private
-                university located in malabe and colombo, sri lanka. it
-                specialises in various fields like technology and management.
-              </motion.p>
-            </div>
+        {/* First Column: Description */}
+        <div className="lg:col-span-1 flex items-center justify-center">
+          <div className="lg:max-w-lg text-center">
+            <motion.h1
+              className="mt-2 text-pretty text-[70px] font-semibold tracking-tight text-gray-900 sm:text-[70px] font-assassin text-left"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+            >
+              what is sliit
+            </motion.h1>
+            <motion.p
+              className="text-[30px] font-assassin text-left"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+            >
+              sri lanka institute of information technology is a private
+              university located in malabe and colombo, sri lanka. t specializes
+              in various fields like technology and management.
+            </motion.p>
           </div>
         </div>
+
+        {/* Second Column: Image */}
         <motion.div
-          className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
+          className="lg:col-span-1 flex items-center justify-center"
           initial={{ x: 100 }}
           animate={{ x: 0 }}
           transition={{ type: "spring", stiffness: 100 }}
         >
           <img
-            alt=""
+            alt="SLIIT Logo"
             src={sliitLogo}
-            className="h-[250px] max-w-[250px] rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-          />
-        </motion.div>
-      </motion.div>
-
-      {/* Second Section */}
-      <motion.div
-        className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-          <div className="lg:pr-4">
-            <div className="lg:max-w-lg">
-              <motion.h1
-                className="mt-2 text-pretty text-[50px] font-semibold tracking-tight text-gray-900 sm:text-[70px] font-assassin"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
-              >
-                what is rotaract
-              </motion.h1>
-              <motion.p
-                className="mt-6 text-[30px] text-gray-700 font-assassin"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.4 }}
-              >
-                Rotaract is a global organization for young adults, supported by
-                Rotary International, that fosters leadership, community
-                service, and professional growth.
-              </motion.p>
-            </div>
-          </div>
-        </div>
-        <motion.div
-          className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
-          initial={{ x: 100 }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 100 }}
-        >
-          <img
-            alt=""
-            src={rotaractLogo}
-            className="h-[250px] max-w-[250px] rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-          />
-        </motion.div>
-      </motion.div>
-
-      {/* Third Section */}
-      <motion.div
-        className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-          <div className="lg:pr-4">
-            <div className="lg:max-w-lg">
-              <motion.h1
-                className="mt-2 text-pretty text-[60px] font-semibold tracking-tight text-gray-900 sm:text-[70px] font-assassin"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
-              >
-                what is racsliit
-              </motion.h1>
-              <motion.p
-                className="text-[30px] text-gray-700 font-assassin"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.4 }}
-              >
-                Rotaract Club of SLIIT has performed exceptionally well in the
-                past Rotaract years, having won more than 90 awards, including
-                Most Outstanding Club of the Year 2022-23.
-              </motion.p>
-            </div>
-          </div>
-        </div>
-        <motion.div
-          className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden"
-          initial={{ x: 100 }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 100 }}
-        >
-          <img
-            alt=""
-            src={racsliitLogo}
             className="h-[250px] max-w-[250px] rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
           />
         </motion.div>

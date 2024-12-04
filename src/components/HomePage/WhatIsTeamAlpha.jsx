@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import whatIsAlpha from "../../assets/whatIsAlpha.png";
+import "boxicons/css/boxicons.min.css"; // Import Boxicons
 
 const WhatIsTeamAlpha = () => {
   const stats = [
@@ -56,51 +57,65 @@ const WhatIsTeamAlpha = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
-        className="mx-auto max-w-7xl px-6 lg:px-8"
+        className="mx-auto max-w-7xl"
       >
+        {/* Two-column layout for description and social media links */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="mx-auto max-w-2xl lg:mx-0"
-        >
-          <h2 className="text-5xl font-semibold tracking-tight text-black sm:text-7xl font-assassin">
-            what is team alpha
-          </h2>
-          <p className="mt-8 text-[25px] font-bold text-slate-800 sm:text-[30px] font-assassin">
-            team alpha is a team-building event by the rotaract club of sliit,
-            aimed at inspiring leadership, teamwork, and growth among sri lankan
-            youth by combining challenging activities, professional insights,
-            and lasting memories, fostering camaraderie and resilience.
-          </p>
-        </motion.div>
-
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 1, duration: 0.8 }}
-          className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none"
+          className="grid grid-cols-1 gap-[200px] sm:grid-cols-2 sm:gap-32 lg:grid-cols-2"
         >
-          <motion.dl
+          {/* First Column: Description */}
+          <motion.div
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
-            transition={{ delay: 1.5, duration: 0.8 }}
-            className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4"
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="mx-auto max-w-2xl lg:mx-0"
           >
-            {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col-reverse gap-1">
-                <dt className="text-base/7 text-gray-300">{stat.name}</dt>
-                <dd className="text-4xl font-semibold tracking-tight text-white">
-                  {typeof stat.value === "number" ? (
-                    <CountUp end={stat.value} />
-                  ) : (
-                    stat.value
-                  )}
-                </dd>
-              </div>
-            ))}
-          </motion.dl>
-        </motion.div> */}
+            <h2 className="text-5xl font-semibold tracking-tight text-black sm:text-7xl font-assassin">
+              what is team alpha
+            </h2>
+            <p className="mt-8 text-[25px] font-bold text-slate-800 sm:text-[30px] font-assassin">
+              team alpha is a team-building event by the rotaract club of sliit,
+              aimed at inspiring leadership, teamwork, and growth among sri
+              lankan youth by combining challenging activities, professional
+              insights, and lasting memories, fostering camaraderie and
+              resilience.
+            </p>
+          </motion.div>
+
+          {/* Second Column: Social Media Links */}
+          <div className="flex flex-col space-y-4 items-end text-right mr-24">
+            <a
+              href="https://www.facebook.com/TeamAlpha"
+              className="text-lg text-blue-600 hover:text-blue-800 flex items-center space-x-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bx bxl-facebook-circle text-[50px]"></i>
+              <span>Facebook</span>
+            </a>
+            <a
+              href="https://www.instagram.com/TeamAlpha"
+              className="text-lg text-pink-600 hover:text-pink-800 flex items-center space-x-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bx bxl-instagram text-[50px]"></i>
+              <span>Instagram</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/TeamAlpha"
+              className="text-lg text-blue-700 hover:text-blue-900 flex items-center space-x-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bx bxl-linkedin text-[50px]"></i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   );
