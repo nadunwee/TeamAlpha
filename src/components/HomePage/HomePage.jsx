@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
-
+import DrivingForce from "../DrivingForce";
 import NavigationBar from "../NavigationBar";
-
+import HomePagePartners from "./HomePagePartners";
 import WhatIsTeamAlpha from "./WhatIsTeamAlpha";
 import backgroundImg from "../../assets/newback.jpg";
+import { useEffect, useState } from "react";
+import CountDown from "./CountDown";
 import Footer from "../Footer/Footer";
 import PastEvents from "./PastEvents";
+import bluredImg from "../../assets/bluredImg.png";
 
 export default function HomePage() {
   return (
