@@ -114,7 +114,7 @@ export default function HomePage() {
         <PastEvents />
         <WhatIsTeamAlpha />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

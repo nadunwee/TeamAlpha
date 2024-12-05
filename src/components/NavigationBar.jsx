@@ -11,7 +11,7 @@ const navigation = [
   { name: "about us", href: "/about-us" },
   { name: "driving force", href: "/driving-force" },
   { name: "board of officials", href: "/board-of-officials" },
-  { name: "contact us", href: "/contact-us" },
+  { name: "scavenger hunt", href: "/scavenger-hunt" },
   { name: "faq", href: "/faq" },
 ];
 

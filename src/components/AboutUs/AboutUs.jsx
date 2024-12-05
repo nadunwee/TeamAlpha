@@ -1,60 +1,106 @@
 import { motion } from "framer-motion"; // Import motion from framer-motion
 import NavigationBar from "../NavigationBar";
 import sliitLogo from "../../assets/sliitLogo.png";
+import rotaLogo from "../../assets/rotaract.png";
+import racsliitLogo from "../../assets/racsliitLogo.png";
 
 const AboutUs = () => {
   return (
     <div
-      className="relative isolate overflow-hidden bg-cover bg-center bg-no-repeat px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
+      className="bg-cover bg-center py-8 sm:py-12 lg:py-16"
       style={{ backgroundColor: "#CDB898" }}
     >
       <NavigationBar />
 
-      {/* First Section */}
-      <motion.div
-        className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-x-8"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        {/* First Column: Description */}
-        <div className="lg:col-span-1 flex items-center justify-center">
-          <div className="lg:max-w-lg text-center">
-            <motion.h1
-              className="mt-2 text-pretty text-[70px] font-semibold tracking-tight text-gray-900 sm:text-[70px] font-assassin text-left"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-            >
-              what is sliit
-            </motion.h1>
-            <motion.p
-              className="text-[30px] font-assassin text-left"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-            >
-              sri lanka institute of information technology is a private
-              university located in malabe and colombo, sri lanka. t specializes
-              in various fields like technology and management.
-            </motion.p>
-          </div>
-        </div>
-
-        {/* Second Column: Image */}
+      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-4 mt-10 sm:mt-0 sm:px-6 sm:py-16 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
         <motion.div
-          className="lg:col-span-1 flex items-center justify-center"
-          initial={{ x: 100 }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 100 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <p className="text-[50px] sm:text-[80px] font-bold tracking-tight text-gray-900  font-assassin">
+            what is sliit
+          </p>
+          <p className="mt-4 text-gray-500 font-assassin text-[30px]">
+            The walnut wood card tray is precision milled to perfectly fit a
+            stack of Focus cards. The powder coated steel divider separates
+            active cards from new ones, or can be used to archive important task
+            lists.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1, duration: 0.7 }}
         >
           <img
-            alt="SLIIT Logo"
+            alt="sliit logo"
             src={sliitLogo}
-            className="h-[250px] max-w-[250px] rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
+            className="rounded-lg bg-gray-100 w-full sm:w-3/4 lg:w-1/2 mx-auto"
           />
         </motion.div>
-      </motion.div>
+      </div>
+
+      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-4 mt-10 sm:mt-0 sm:px-6 sm:py-16 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-[50px] sm:text-[80px] font-bold tracking-tight text-gray-900 font-assassin">
+            what is rotaract
+          </h2>
+          <p className="mt-4 text-gray-500 font-assassin text-[30px]">
+            The walnut wood card tray is precision milled to perfectly fit a
+            stack of Focus cards. The powder coated steel divider separates
+            active cards from new ones, or can be used to archive important task
+            lists.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1, duration: 0.7 }}
+        >
+          <img
+            alt="rotaract logo"
+            src={rotaLogo}
+            className="rounded-lg bg-gray-100 w-full sm:w-3/4 lg:w-1/2 mx-auto"
+          />
+        </motion.div>
+      </div>
+
+      <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-4 mt-10 sm:mt-0 sm:px-6 sm:py-16 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-[50px] sm:text-[80px] font-bold tracking-tight text-gray-900 font-assassin">
+            what is racsliit
+          </h2>
+          <p className="mt-4 text-gray-500 font-assassin text-[30px]">
+            The walnut wood card tray is precision milled to perfectly fit a
+            stack of Focus cards. The powder coated steel divider separates
+            active cards from new ones, or can be used to archive important task
+            lists.
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1, duration: 0.7 }}
+        >
+          <img
+            alt="rotaract logo"
+            src={racsliitLogo}
+            className="rounded-lg bg-gray-100 w-full sm:w-3/4 lg:w-1/2 mx-auto"
+          />
+        </motion.div>
+      </div>
     </div>
   );
 };

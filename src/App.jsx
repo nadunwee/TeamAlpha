@@ -6,6 +6,7 @@ import DrivingForce from "./components/DrivingForce/DrivingForce";
 import BoardOfOfficials from "./components/DrivingForce/BoardOfOfficials";
 import ContactUs from "./components/ContactUs/ContactUs";
 import FAQ from "./components/FAQ/FAQ";
+import ScavengerHunt from "./components/ScavengerHunt/ScavengerHunt";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/partners" element={<Partners />} />
         <Route path="/driving-force" element={<DrivingForce />} />
         <Route path="/board-of-officials" element={<BoardOfOfficials />} />
-        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/scavenger-hunt" element={<ScavengerHunt />} />
         <Route path="/faq" element={<FAQ />} />
       </Routes>
     </Router>
