@@ -4,6 +4,7 @@ import { Dialog } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import mobileNav from "../assets/mobileNav.png"; // Ensure correct path to the image
+import alphaLogo from "../assets/alphaLogo.png";
 
 // Navigation links
 const navigation = [
@@ -106,11 +107,7 @@ const NavigationBar = () => {
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
                   <span className="sr-only">team alpha</span>
-                  <img
-                    alt=""
-                    src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                    className="h-8 w-auto"
-                  />
+                  <img alt="" src={alphaLogo} className="h-8 w-auto" />
                 </a>
                 <button
                   type="button"
@@ -128,7 +125,7 @@ const NavigationBar = () => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[31px]"
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[35px]"
                       >
                         {item.name}
                       </a>
