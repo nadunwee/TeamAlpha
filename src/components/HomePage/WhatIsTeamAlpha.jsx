@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import whatIsAlpha from "../../assets/whatIsAlpha.png";
-import "boxicons/css/boxicons.min.css"; // Import Boxicons
+import "boxicons/css/boxicons.min.css";
 import CountDown from "./CountDown";
 import alphaLogo from "../../assets/alphaLogo.png";
 

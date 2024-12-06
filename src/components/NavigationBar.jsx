@@ -66,12 +66,21 @@ const NavigationBar = () => {
         <div className="hidden lg:flex lg:gap-x-12 font-assassin text-6xl">
           {navigation.map((item) =>
             item.subLinks ? (
-              <div key={item.name} className="relative group mt-[-30px]">
+              <div key={item.name} className="relative group mt-[-29px]">
                 <button className={`${navClass} text-[24px]`}>
                   {item.name}
                 </button>
                 {/* Hover menu for desktop */}
-                <div className="absolute left-0 hidden mt-0 space-y-2 bg-white text-black font-semibold p-4 rounded-lg shadow-lg group-hover:block w-[230px]">
+                <motion.div
+                  initial={{ opacity: 0, scaleY: 0 }}
+                  animate={{ opacity: 1, scaleY: 1 }}
+                  exit={{ opacity: 0, scaleY: 0 }}
+                  transition={{
+                    duration: 0.4,
+                    ease: "easeOut",
+                  }}
+                  className="absolute left-0 hidden mt-0 space-y-2 bg-white text-black font-semibold p-4 rounded-lg shadow-lg group-hover:block w-[230px]"
+                >
                   {item.subLinks.map((subItem) => (
                     <a
                       key={subItem.name}
@@ -81,7 +90,7 @@ const NavigationBar = () => {
                       {subItem.name}
                     </a>
                   ))}
-                </div>
+                </motion.div>
               </div>
             ) : (
               <a
@@ -152,20 +161,28 @@ const NavigationBar = () => {
                           >
                             {item.name}
                           </button>
-                          {/* Mobile dropdown */}
-                          {membersMenuOpen && (
-                            <div className="space-y-2 pl-6 pt-2">
-                              {item.subLinks.map((subItem) => (
-                                <a
-                                  key={subItem.name}
-                                  href={subItem.href}
-                                  className="block text-[16px] py-1 text-gray-300 hover:bg-gray-700 font-assassin rounded-lg px-3"
-                                >
-                                  {subItem.name}
-                                </a>
-                              ))}
-                            </div>
-                          )}
+                          {/* Mobile dropdown with animation */}
+                          <AnimatePresence>
+                            {membersMenuOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="space-y-2 pl-6 pt-2 overflow-hidden"
+                              >
+                                {item.subLinks.map((subItem) => (
+                                  <a
+                                    key={subItem.name}
+                                    href={subItem.href}
+                                    className="block text-[16px] py-1 text-gray-300 hover:bg-gray-700 font-assassin rounded-lg px-3"
+                                  >
+                                    {subItem.name}
+                                  </a>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
                         </div>
                       ) : (
                         <a

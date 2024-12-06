@@ -2,29 +2,28 @@ import { motion } from "framer-motion";
 import NavigationBar from "../NavigationBar";
 import jayodHeadshot from "../../assets/jayodHeadshot.jpg";
 import manishaHeadshot from "../../assets/manishaHeadshot.jpg";
-import yasithHeadshot from "../../assets/yasithHeadshot.jpg";
-import charithHeadshot from "../../assets/charithHeadshot.jpg";
-import amandiHeadshot from "../../assets/amandiHeadshot.jpg";
+import yasithHeadshot from "../../assets/yasithHeadshot.webp";
+import charithHeadshot from "../../assets/charithHeadshot.webp";
+import amandiHeadshot from "../../assets/amandiHeadshot.webp";
 import dinuriBodHeadshot from "../../assets/dinuriBodHeadshot.jpg";
-import dulashaHeadshot from "../../assets/dulashaHeadshot.jpg";
-import tanuriHeadshot from "../../assets/tanuriHeadshot.jpg";
-import kavishaHeadshot from "../../assets/kavishaHeadshot.jpg";
-import tehanHeadshot from "../../assets/tehanHeadshot.jpg";
-import ranukaHeadshot from "../../assets/ranukaHeadshot.jpg";
-import tariniHeadshot from "../../assets/tariniHeadshot.jpg";
-import sheniseHeadshot from "../../assets/sheniseHeadshot.jpg";
-import danushkarHeadshot from "../../assets/danushkarHeadshot.jpg";
-import seraHeadshot from "../../assets/seraHeadshot.jpg";
-import shameenaHeadshot from "../../assets/shameenaHeadshot.jpg";
-import geminiHeadshot from "../../assets/geminiHeadshot.jpg";
+import dulashaHeadshot from "../../assets/dulashaHeadshot.webp";
+import tanuriHeadshot from "../../assets/tanuriHeadshot.webp";
+import kavishaHeadshot from "../../assets/kavishaHeadshot.webp";
+import tehanHeadshot from "../../assets/tehanHeadshot.webp";
+import ranukaHeadshot from "../../assets/ranukaHeadshot.webp";
+import tariniHeadshot from "../../assets/tariniHeadshot.webp";
+import danushkarHeadshot from "../../assets/danushkarHeadshot.webp";
+import seraHeadshot from "../../assets/seraHeadshot.webp";
+import shameenaHeadshot from "../../assets/shameenaHeadshot.webp";
+import geminiHeadshot from "../../assets/geminiHeadshot.webp";
 import chelakaHeadshot from "../../assets/chelakaHeadshot.jpg";
 import lakshithaHeadshot from "../../assets/lakshiHeadshot.jpg";
-import theepthiHeadshot from "../../assets/theepthiHeadshot.jpg";
-import bishruHeadshot from "../../assets/bishruHeadshot.jpg";
-import thisusHeadshot from "../../assets/thisusHeadshot.jpg";
-import muhammedHeadshot from "../../assets/muhammedHeadshot.jpg";
-import kisajaHeadshot from "../../assets/kisajaHeadshot.jpg";
-import shanjaiHeadshot from "../../assets/shanjaiHeadshot.jpg";
+import theepthiHeadshot from "../../assets/theepthiHeadshot.webp";
+import bishruHeadshot from "../../assets/bishruHeadshot.webp";
+import thisusHeadshot from "../../assets/thisusHeadshot.webp";
+import muhammedHeadshot from "../../assets/muhammedHeadshot.webp";
+import kisajaHeadshot from "../../assets/kisajaHeadshot.webp";
+import shanjaiHeadshot from "../../assets/shanjaiHeadshot.webp";
 import minupaHeadshot from "../../assets/minupaHeadshot.webp";
 import harithraHeadshot from "../../assets/harithraHeadshot.webp";
 import dasuniHeadshot from "../../assets/dasuniHeadshot.webp";
@@ -208,7 +207,7 @@ const BoardOfOfficials = () => {
       >
         <NavigationBar />
         <div className="flex flex-col items-center gap-12 px-4 sm:px-8 lg:px-16">
-          <p className="font-assassin text-[35px] lg:text-[80px] mt-[50px] sm:mt-[50px] mb-[10px]">
+          <p className="font-assassin text-[35px] lg:text-[80px] mt-[50px] sm:mt-[20px]">
             racsliit board of officials
           </p>
 
