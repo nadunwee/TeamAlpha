@@ -30,6 +30,7 @@ import harithraHeadshot from "../../assets/harithraHeadshot.jpg";
 import dasuniHeadshot from "../../assets/dasuniHeadshot.jpg";
 import duwaragieHeadshot from "../../assets/duwaragieHeadshot.jpg";
 import vimethHeadshot from "../../assets/vimethHeadshot.jpg";
+import Footer from "../Footer/Footer";
 
 const BoardOfOfficials = () => {
   const categories = {
@@ -200,54 +201,57 @@ const BoardOfOfficials = () => {
   };
 
   return (
-    <div
-      className="bg-cover bg-center py-12 sm:py-16 lg:py-24"
-      style={{ backgroundColor: "#CDB898" }} // Replace with the actual image path
-    >
-      <NavigationBar />
-      <div className="flex flex-col items-center gap-12 px-4 sm:px-8 lg:px-16">
-        <p className="font-assassin text-[35px] lg:text-[80px] mt-[50px] sm:mt-[50px] mb-[10px]">
-          racsliit board of officials
-        </p>
+    <>
+      <div
+        className="bg-cover bg-center py-12 sm:py-16 lg:py-24"
+        style={{ backgroundColor: "#CDB898" }} // Replace with the actual image path
+      >
+        <NavigationBar />
+        <div className="flex flex-col items-center gap-12 px-4 sm:px-8 lg:px-16">
+          <p className="font-assassin text-[35px] lg:text-[80px] mt-[50px] sm:mt-[50px] mb-[10px]">
+            racsliit board of officials
+          </p>
 
-        {Object.entries(categories).map(([category, people]) => (
-          <motion.div
-            key={category}
-            className="w-full"
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
-          >
-            {/* People Cards */}
-            <div className="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-12">
-              {people.map((person) => (
-                <motion.div
-                  key={person.name}
-                  className="group relative w-64 sm:w-72 h-40 sm:h-48 lg:h-56 rounded-lg overflow-hidden shadow-lg"
-                  variants={itemVariants}
-                >
-                  {/* Image */}
-                  <img
-                    src={person.image || person.imageUrl}
-                    alt={person.name}
-                    className="w-full h-full object-cover"
-                  />
-                  {/* Hover effect */}
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-white text-sm sm:text-base lg:text-2xl font-semibold text-center">
-                      {person.name}
-                    </span>
-                    <span className="text-white text-xs sm:text-sm lg:text-base text-center">
-                      {person.role}
-                    </span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        ))}
+          {Object.entries(categories).map(([category, people]) => (
+            <motion.div
+              key={category}
+              className="w-full"
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+            >
+              {/* People Cards */}
+              <div className="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-12">
+                {people.map((person) => (
+                  <motion.div
+                    key={person.name}
+                    className="group relative w-64 sm:w-72 h-40 sm:h-48 lg:h-56 rounded-lg overflow-hidden shadow-lg"
+                    variants={itemVariants}
+                  >
+                    {/* Image */}
+                    <img
+                      src={person.image || person.imageUrl}
+                      alt={person.name}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Hover effect */}
+                    <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-white text-sm sm:text-base lg:text-2xl font-semibold text-center">
+                        {person.name}
+                      </span>
+                      <span className="text-white text-xs sm:text-sm lg:text-base text-center">
+                        {person.role}
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 

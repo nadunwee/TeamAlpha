@@ -18,6 +18,51 @@ const Footer = () => {
             what's possible. Join us in sculpting a future that's not just about
             us, but for us all.
           </p>
+          <div className="flex gap-4 mt-6">
+            <li className="flex items-center">
+              <a
+                href="https://www.instagram.com/rotaract_sliit/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                <i className="bx bxl-instagram text-pink-500 text-[40px] mr-2 hover:scale-110 transition-transform duration-200"></i>
+              </a>
+            </li>
+
+            <li className="flex items-center">
+              <a
+                href="https://www.tiktok.com/@yourtiktokhandle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                <i className="bx bxl-tiktok text-black text-[40px] mr-2 hover:scale-110 transition-transform duration-200"></i>
+              </a>
+            </li>
+
+            <li className="flex items-center">
+              <a
+                href="https://www.facebook.com/RotaractSLIIT/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                <i className="bx bxl-facebook text-blue-600 text-[40px] mr-2 hover:scale-110 transition-transform duration-200"></i>
+              </a>
+            </li>
+
+            <li className="flex items-center">
+              <a
+                href="https://www.linkedin.com/company/rotaractsliit/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                <i className="bx bxl-linkedin text-blue-500 text-[40px] mr-2 hover:scale-110 transition-transform duration-200"></i>
+              </a>
+            </li>
+          </div>
         </div>
 
         {/* Contact Info */}
@@ -26,16 +71,50 @@ const Footer = () => {
             Contact Us
           </h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>Email: contact@racsliit.com</li>
-            <li>Phone: +94 123 456 789</li>
-            <li>Address: SLIIT Campus, Malabe, Sri Lanka</li>
+            <li>Email: teamalpha.racsliit@gmail.com</li>
+            <li>
+              <div className="flex gap-4 mt-6">
+                <a
+                  href="https://www.instagram.com/teamalpha.racsliit/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <i className="bx bxl-instagram text-pink-500 text-[40px] mr-2 hover:scale-110 transition-transform duration-200"></i>
+                </a>
+                <a
+                  href="https://www.tiktok.com/@yourtiktokhandle"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <i className="bx bxl-tiktok text-black text-[40px] mr-2 hover:scale-110 transition-transform duration-200"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61566021682678"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <i className="bx bxl-facebook text-blue-600 text-[40px] mr-2 hover:scale-110 transition-transform duration-200"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/yourlinkedinhandle"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center"
+                >
+                  <i className="bx bxl-linkedin text-blue-500 text-[40px] mr-2 hover:scale-110 transition-transform duration-200"></i>
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
 
         {/* Google Map */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left flex-1">
           <h3 className="mb-4 text-lg font-bold uppercase tracking-wide">
-            Team Alpha Location
+            Brotherhood Shall Forge Here
           </h3>
           <div className="overflow-hidden rounded-lg shadow-lg w-full max-w-sm md:max-w-none">
             <iframe
