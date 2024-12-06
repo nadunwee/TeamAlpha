@@ -17,6 +17,7 @@ import chelakaHeadshot from "../../assets/chelakaHeadshot.jpg";
 import lakshiHeadshot from "../../assets/lakshiHeadshot.jpg";
 import ranudiHeadshot from "../../assets/ranudiHeadshot.jpeg";
 import ImanHeadshot from "../../assets/ImanHeadshot.jpeg";
+import dindiHeadshot from "../../assets/dindiHeadshot.webp";
 import Footer from "../Footer/Footer";
 
 const DrivingForce = () => {
@@ -61,8 +62,7 @@ const DrivingForce = () => {
       {
         name: "Dinadi",
         role: "Member",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: dindiHeadshot,
       },
       {
         name: "Nadun",

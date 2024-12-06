@@ -25,11 +25,11 @@ import thisusHeadshot from "../../assets/thisusHeadshot.jpg";
 import muhammedHeadshot from "../../assets/muhammedHeadshot.jpg";
 import kisajaHeadshot from "../../assets/kisajaHeadshot.jpg";
 import shanjaiHeadshot from "../../assets/shanjaiHeadshot.jpg";
-import minupaHeadshot from "../../assets/minupaHeadshot.jpg";
-import harithraHeadshot from "../../assets/harithraHeadshot.jpg";
-import dasuniHeadshot from "../../assets/dasuniHeadshot.jpg";
-import duwaragieHeadshot from "../../assets/duwaragieHeadshot.jpg";
-import vimethHeadshot from "../../assets/vimethHeadshot.jpg";
+import minupaHeadshot from "../../assets/minupaHeadshot.webp";
+import harithraHeadshot from "../../assets/harithraHeadshot.webp";
+import dasuniHeadshot from "../../assets/dasuniHeadshot.webp";
+import duwaragieHeadshot from "../../assets/duwaragieHeadshot.webp";
+import vimethHeadshot from "../../assets/vimethHeadshot.webp";
 import Footer from "../Footer/Footer";
 
 const BoardOfOfficials = () => {
