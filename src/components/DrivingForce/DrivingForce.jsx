@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import NavigationBar from "../NavigationBar";
-import DrivingForceBack from "../../assets/DrivingForceBack.png";
 import UdeepHeadshort from "../../assets/UdeepHeadshort.jpg";
 import ijasHeadshot from "../../assets/ijasHeadshot.jpg";
 import dinuriHeadshot from "../../assets/dinuriHeadshot.jpg";
@@ -16,7 +15,6 @@ import sheniseHeadshot from "../../assets/sheniseHeadshot.jpg";
 import miyuniHeadshot from "../../assets/miyuniHeadshot.jpeg";
 import chelakaHeadshot from "../../assets/chelakaHeadshot.jpg";
 import lakshiHeadshot from "../../assets/lakshiHeadshot.jpg";
-import SanduniHeadshot from "../../assets/SanduniHeadshot.jpg";
 import ranudiHeadshot from "../../assets/ranudiHeadshot.jpeg";
 import ImanHeadshot from "../../assets/ImanHeadshot.jpeg";
 import Footer from "../Footer/Footer";
@@ -116,11 +114,6 @@ const DrivingForce = () => {
         name: "Ranudi",
         role: "Member",
         imageUrl: ranudiHeadshot,
-      },
-      {
-        name: "Sanduni",
-        role: "Member",
-        imageUrl: SanduniHeadshot,
       },
     ],
     "Logistics and Event Day Handling": [

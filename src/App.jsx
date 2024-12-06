@@ -18,6 +18,7 @@ function App() {
         <Route path="/driving-force" element={<DrivingForce />} />
         <Route path="/board-of-officials" element={<BoardOfOfficials />} />
         <Route path="/scavenger-hunt" element={<ScavengerHunt />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/faq" element={<FAQ />} />
       </Routes>
     </Router>

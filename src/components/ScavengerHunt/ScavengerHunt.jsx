@@ -20,7 +20,7 @@ const ScavengerHunt = () => {
         {/* Overlay Text */}
         <div className="relative z-10 flex items-center justify-center h-full text-center">
           <h1 className="text-5xl font-semibold tracking-tight text-white bg-opacity-75 px-4 py-2 rounded sm:text-7xl font-assassin">
-            please stay tuned until the big day
+            please stay tuned until the big day for more secrets
           </h1>
         </div>
       </div>

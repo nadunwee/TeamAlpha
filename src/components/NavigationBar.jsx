@@ -14,6 +14,7 @@ const navigation = [
   { name: "board of officials", href: "/board-of-officials" },
   { name: "scavenger hunt", href: "/scavenger-hunt" },
   { name: "faq", href: "/faq" },
+  { name: "contact us", href: "/contact-us" },
 ];
 
 const NavigationBar = () => {
