@@ -6,12 +6,17 @@ import { useLocation } from "react-router-dom";
 import mobileNav from "../assets/mobileNav.png"; // Ensure correct path to the image
 import alphaLogo from "../assets/alphaLogo.png";
 
-// Navigation links
+// Navigation links with Members dropdown
 const navigation = [
   { name: "home", href: "/" },
   { name: "about us", href: "/about-us" },
-  { name: "driving force", href: "/driving-force" },
-  { name: "board of officials", href: "/board-of-officials" },
+  {
+    name: "members", // The new Members dropdown
+    subLinks: [
+      { name: "team alpha oc", href: "/driving-force" },
+      { name: "board of officials", href: "/board-of-officials" },
+    ],
+  },
   { name: "scavenger hunt", href: "/scavenger-hunt" },
   { name: "faq", href: "/faq" },
   { name: "contact us", href: "/contact-us" },
@@ -19,6 +24,7 @@ const navigation = [
 
 const NavigationBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [membersMenuOpen, setMembersMenuOpen] = useState(false); // Manage dropdown state for mobile
   const location = useLocation();
 
   // Determine the navigation link styles based on the current path
@@ -45,11 +51,6 @@ const NavigationBar = () => {
             <span className="text-black font-assassin text-4xl">
               Team Alpha
             </span>
-            {/* <img
-              alt=""
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
-            /> */}
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -63,22 +64,42 @@ const NavigationBar = () => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12 font-assassin text-6xl">
-          {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className={`${navClass} text-[24px]`} // Add text-2xl here
-            >
-              {item.name}
-            </a>
-          ))}
+          {navigation.map((item) =>
+            item.subLinks ? (
+              <div key={item.name} className="relative group mt-[-30px]">
+                <button className={`${navClass} text-[24px]`}>
+                  {item.name}
+                </button>
+                {/* Hover menu for desktop */}
+                <div className="absolute left-0 hidden mt-0 space-y-2 bg-white text-black font-semibold p-4 rounded-lg shadow-lg group-hover:block w-auto">
+                  {item.subLinks.map((subItem) => (
+                    <a
+                      key={subItem.name}
+                      href={subItem.href}
+                      className="block text-[20px] py-1 hover:text-gray-700"
+                    >
+                      {subItem.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <a
+                key={item.name}
+                href={item.href}
+                className={`${navClass} text-[24px]`}
+              >
+                {item.name}
+              </a>
+            )
+          )}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="https://tripetto.app/run/3QUIZ3HBI8"
             className="text-[30px] font-semibold text-black font-assassin"
-            target="_blank" // This will open the link in a new tab
-            rel="noopener noreferrer" // This is for security purposes, especially with _blank
+            target="_blank"
+            rel="noopener noreferrer"
           >
             register <span aria-hidden="true">&rarr;</span>
           </a>
@@ -101,8 +122,8 @@ const NavigationBar = () => {
               className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
               style={{
                 backgroundImage: `url(${mobileNav})`, // Apply the image URL directly
-                backgroundSize: "cover", // Ensures the image covers the container
-                backgroundPosition: "center", // Keeps the image centered
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             >
               <div className="flex items-center justify-between">
@@ -122,22 +143,47 @@ const NavigationBar = () => {
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[35px]"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
+                    {navigation.map((item) =>
+                      item.subLinks ? (
+                        <div key={item.name}>
+                          <button
+                            onClick={() => setMembersMenuOpen(!membersMenuOpen)} // Toggle dropdown visibility
+                            className="block text-base font-semibold text-gray-300"
+                          >
+                            {item.name}
+                          </button>
+                          {/* Mobile dropdown */}
+                          {membersMenuOpen && (
+                            <div className="space-y-2 pl-6">
+                              {item.subLinks.map((subItem) => (
+                                <a
+                                  key={subItem.name}
+                                  href={subItem.href}
+                                  className="block text-[31px] py-2 text-gray-300 hover:bg-gray-700"
+                                >
+                                  {subItem.name}
+                                </a>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ) : (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700"
+                        >
+                          {item.name}
+                        </a>
+                      )
+                    )}
                   </div>
                   <div className="py-6">
                     <a
                       href="https://tripetto.app/run/3QUIZ3HBI8"
                       className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[31px]"
-                      target="_blank" // This will open the link in a new tab
-                      rel="noopener noreferrer" // This is for security purposes, especially with _blank
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       register
                     </a>

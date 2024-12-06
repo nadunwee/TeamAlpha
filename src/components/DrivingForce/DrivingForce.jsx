@@ -18,6 +18,7 @@ import lakshiHeadshot from "../../assets/lakshiHeadshot.jpg";
 import ranudiHeadshot from "../../assets/ranudiHeadshot.jpeg";
 import ImanHeadshot from "../../assets/ImanHeadshot.jpeg";
 import dindiHeadshot from "../../assets/dindiHeadshot.webp";
+import TharushimaHeadshot from "../../assets/TharushimaHeadshot.jpg";
 import Footer from "../Footer/Footer";
 
 const DrivingForce = () => {
@@ -126,6 +127,11 @@ const DrivingForce = () => {
         name: "Udeep",
         role: "Member",
         imageUrl: UdeepHeadshort,
+      },
+      {
+        name: "Tharushima",
+        role: "Member",
+        imageUrl: TharushimaHeadshot,
       },
     ],
   };
