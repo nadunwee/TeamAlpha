@@ -32,7 +32,7 @@ const Footer = () => {
 
             <li className="flex items-center">
               <a
-                href="https://www.tiktok.com/@yourtiktokhandle"
+                href="https://www.tiktok.com/@rotaract_sliit?_t=ZS-8rz7qAERFhP&_r=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center"
@@ -83,7 +83,7 @@ const Footer = () => {
                   <i className="bx bxl-instagram text-pink-500 text-[40px] mr-2 hover:scale-110 transition-transform duration-200"></i>
                 </a>
                 <a
-                  href="https://www.tiktok.com/@yourtiktokhandle"
+                  href="https://www.tiktok.com/@teamalpha_racsliit?_t=ZS-8rz7kk4FZZ4&_r=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center"
