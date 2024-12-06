@@ -148,18 +148,18 @@ const NavigationBar = () => {
                         <div key={item.name}>
                           <button
                             onClick={() => setMembersMenuOpen(!membersMenuOpen)} // Toggle dropdown visibility
-                            className="block text-base font-semibold text-gray-300"
+                            className="block text-base font-semibold text-gray-300 font-assassin text-[31px]"
                           >
                             {item.name}
                           </button>
                           {/* Mobile dropdown */}
                           {membersMenuOpen && (
-                            <div className="space-y-2 pl-6">
+                            <div className="space-y-2 pl-6 pt-2">
                               {item.subLinks.map((subItem) => (
                                 <a
                                   key={subItem.name}
                                   href={subItem.href}
-                                  className="block text-[31px] py-2 text-gray-300 hover:bg-gray-700"
+                                  className="block text-[16px] py-1 text-gray-300 hover:bg-gray-700 font-assassin rounded-lg px-3"
                                 >
                                   {subItem.name}
                                 </a>
@@ -171,7 +171,7 @@ const NavigationBar = () => {
                         <a
                           key={item.name}
                           href={item.href}
-                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700"
+                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[31px]"
                         >
                           {item.name}
                         </a>
