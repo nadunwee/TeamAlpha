@@ -67,7 +67,7 @@ const NavigationBar = () => {
             <a
               key={item.name}
               href={item.href}
-              className={`${navClass} text-[25px]`} // Add text-2xl here
+              className={`${navClass} text-[24px]`} // Add text-2xl here
             >
               {item.name}
             </a>
