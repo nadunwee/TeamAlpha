@@ -10,7 +10,7 @@ const ContactUs = () => {
       name: "Iman Abdeen",
       role: "Participants Engagement and Experience",
       phone: "+94123456789",
-      email: "iman@rotaract.com",
+      email: "imana.racsliit@gmail.com",
       image: ImanHeadshot,
     },
     {
