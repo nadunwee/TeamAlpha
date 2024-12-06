@@ -11,10 +11,10 @@ const navigation = [
   { name: "home", href: "/" },
   { name: "about us", href: "/about-us" },
   {
-    name: "members", // The new Members dropdown
+    name: "driving force", // The new Members dropdown
     subLinks: [
       { name: "team alpha oc", href: "/driving-force" },
-      { name: "board of officials", href: "/board-of-officials" },
+      { name: "racsliit board of officials", href: "/board-of-officials" },
     ],
   },
   { name: "scavenger hunt", href: "/scavenger-hunt" },
@@ -71,7 +71,7 @@ const NavigationBar = () => {
                   {item.name}
                 </button>
                 {/* Hover menu for desktop */}
-                <div className="absolute left-0 hidden mt-0 space-y-2 bg-white text-black font-semibold p-4 rounded-lg shadow-lg group-hover:block w-auto">
+                <div className="absolute left-0 hidden mt-0 space-y-2 bg-white text-black font-semibold p-4 rounded-lg shadow-lg group-hover:block w-[230px]">
                   {item.subLinks.map((subItem) => (
                     <a
                       key={subItem.name}
