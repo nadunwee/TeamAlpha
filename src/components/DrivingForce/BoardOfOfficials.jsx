@@ -1,5 +1,11 @@
+import { useState, lazy, Suspense } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { motion } from "framer-motion";
-import NavigationBar from "../NavigationBar";
+
+const NavigationBar = lazy(() => import("../NavigationBar"));
+const Footer = lazy(() => import("../Footer/Footer"));
+
 import jayodHeadshot from "../../assets/jayodHeadshot.webp";
 import manishaHeadshot from "../../assets/manishaHeadshot.webp";
 import yasithHeadshot from "../../assets/yasithHeadshot.webp";
@@ -29,9 +35,11 @@ import harithraHeadshot from "../../assets/harithraHeadshot.webp";
 import dasuniHeadshot from "../../assets/dasuniHeadshot.webp";
 import duwaragieHeadshot from "../../assets/duwaragieHeadshot.webp";
 import vimethHeadshot from "../../assets/vimethHeadshot.webp";
-import Footer from "../Footer/Footer";
 
 const BoardOfOfficials = () => {
+  const ITEMS_PER_PAGE = 29; // Number of items to show initially and per load
+  const [visibleItems, setVisibleItems] = useState(ITEMS_PER_PAGE);
+
   const categories = {
     president: [
       {
@@ -199,13 +207,20 @@ const BoardOfOfficials = () => {
     visible: { opacity: 1, scale: 1 },
   };
 
+  const handleLoadMore = () => {
+    setVisibleItems((prev) => prev + ITEMS_PER_PAGE);
+  };
+
   return (
     <>
       <div
         className="bg-cover bg-center py-12 sm:py-16 lg:py-24"
         style={{ backgroundColor: "#CDB898" }} // Replace with the actual image path
       >
-        <NavigationBar />
+        <Suspense fallback={<div>Loading Navigation Bar...</div>}>
+          <NavigationBar />
+        </Suspense>
+
         <div className="flex flex-col items-center gap-12 px-4 sm:px-8 lg:px-16">
           <p className="font-assassin text-[35px] lg:text-[80px] mt-[50px] sm:mt-[20px]">
             racsliit board of officials
@@ -221,18 +236,18 @@ const BoardOfOfficials = () => {
             >
               {/* People Cards */}
               <div className="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-12">
-                {people.map((person) => (
+                {people.slice(0, visibleItems).map((person) => (
                   <motion.div
                     key={person.name}
                     className="group relative w-64 sm:w-72 h-40 sm:h-48 lg:h-56 rounded-lg overflow-hidden shadow-lg"
                     variants={itemVariants}
                   >
-                    {/* Image */}
-                    <img
+                    {/* Lazy-loaded Image */}
+                    <LazyLoadImage
                       src={person.image || person.imageUrl}
                       alt={person.name}
+                      effect="blur" // Adds blur effect while loading
                       className="w-full h-full object-cover"
-                      loading="lazy"
                     />
                     {/* Hover effect */}
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -246,11 +261,24 @@ const BoardOfOfficials = () => {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Load More Button */}
+              {visibleItems < people.length && (
+                <button
+                  onClick={handleLoadMore}
+                  className="mt-6 px-4 py-2 bg-black text-white rounded-md"
+                >
+                  Load More
+                </button>
+              )}
             </motion.div>
           ))}
         </div>
       </div>
-      <Footer />
+
+      <Suspense fallback={<div>Loading Footer...</div>}>
+        <Footer />
+      </Suspense>
     </>
   );
 };
