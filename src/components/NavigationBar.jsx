@@ -134,7 +134,7 @@ const NavigationBar = () => {
             >
               <div className="flex items-center justify-between">
                 <a href="/" className="-m-1.5 p-1.5">
-                  <span className="text-lg font-bold text-white font-assassin text-[40px]">
+                  <span className="font-bold text-white font-assassin text-[40px]">
                     Team Alpha
                   </span>
                 </a>
