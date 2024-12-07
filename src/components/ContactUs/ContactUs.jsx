@@ -18,7 +18,7 @@ const ContactUs = () => {
     {
       name: "Shenise Pronk",
       role: "Co-Chair",
-      phone: "+94123456789",
+      phone: "+94 76 468 4101",
       email: "imana.racsliit@gmail.com",
       image: sheniseHeadshot,
     },
