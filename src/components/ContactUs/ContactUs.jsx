@@ -2,14 +2,30 @@ import { motion } from "framer-motion";
 import NavigationBar from "../NavigationBar";
 import ranudiHeadshot from "../../assets/ranudiHeadshot.jpeg";
 import ImanHeadshot from "../../assets/ImanHeadshot.jpeg";
+import sheniseHeadshot from "../../assets/sheniseHeadshot.jpg";
+import miyuniHeadshot from "../../assets/miyuniHeadshot.jpeg";
 import Footer from "../Footer/Footer";
 
 const ContactUs = () => {
   const contacts = [
     {
+      name: "Miyuni De Almeda",
+      role: "Co-Chair",
+      phone: "+94 74 064 8721",
+      email: "miyunia.racsliit@gmail.com",
+      image: miyuniHeadshot,
+    },
+    {
+      name: "Shenise Pronk",
+      role: "Co-Chair",
+      phone: "+94123456789",
+      email: "imana.racsliit@gmail.com",
+      image: sheniseHeadshot,
+    },
+    {
       name: "Iman Abdeen",
       role: "Participants Engagement and Experience",
-      phone: "+94123456789",
+      phone: "+94 76 465 5407",
       email: "imana.racsliit@gmail.com",
       image: ImanHeadshot,
     },

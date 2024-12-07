@@ -13,8 +13,8 @@ const navigation = [
   {
     name: "driving force", // The new Members dropdown
     subLinks: [
-      { name: "team alpha oc", href: "/driving-force" },
       { name: "racsliit board of officials", href: "/board-of-officials" },
+      { name: "team alpha oc", href: "/driving-force" },
     ],
   },
   { name: "scavenger hunt", href: "/scavenger-hunt" },

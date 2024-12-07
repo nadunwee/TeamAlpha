@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import NavigationBar from "../NavigationBar";
-import jayodHeadshot from "../../assets/jayodHeadshot.jpg";
-import manishaHeadshot from "../../assets/manishaHeadshot.jpg";
+import jayodHeadshot from "../../assets/jayodHeadshot.webp";
+import manishaHeadshot from "../../assets/manishaHeadshot.webp";
 import yasithHeadshot from "../../assets/yasithHeadshot.webp";
 import charithHeadshot from "../../assets/charithHeadshot.webp";
 import amandiHeadshot from "../../assets/amandiHeadshot.webp";
-import dinuriBodHeadshot from "../../assets/dinuriBodHeadshot.jpg";
+import dinuriBodHeadshot from "../../assets/dinuriBodHeadshot.webp";
 import dulashaHeadshot from "../../assets/dulashaHeadshot.webp";
 import tanuriHeadshot from "../../assets/tanuriHeadshot.webp";
 import kavishaHeadshot from "../../assets/kavishaHeadshot.webp";
@@ -16,8 +16,8 @@ import danushkarHeadshot from "../../assets/danushkarHeadshot.webp";
 import seraHeadshot from "../../assets/seraHeadshot.webp";
 import shameenaHeadshot from "../../assets/shameenaHeadshot.webp";
 import geminiHeadshot from "../../assets/geminiHeadshot.webp";
-import chelakaHeadshot from "../../assets/chelakaHeadshot.jpg";
-import lakshithaHeadshot from "../../assets/lakshiHeadshot.jpg";
+import chelakaHeadshot from "../../assets/chelakaHeadshot.webp";
+import lakshithaHeadshot from "../../assets/lakshiHeadshot.webp";
 import theepthiHeadshot from "../../assets/theepthiHeadshot.webp";
 import bishruHeadshot from "../../assets/bishruHeadshot.webp";
 import thisusHeadshot from "../../assets/thisusHeadshot.webp";
@@ -232,6 +232,7 @@ const BoardOfOfficials = () => {
                       src={person.image || person.imageUrl}
                       alt={person.name}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                     {/* Hover effect */}
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

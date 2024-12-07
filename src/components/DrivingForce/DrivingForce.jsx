@@ -13,8 +13,8 @@ import manithHeadshot from "../../assets/manithHeadshot.jpg";
 import rishiniHeadshot from "../../assets/rishiniHeadshot.jpg";
 import sheniseHeadshot from "../../assets/sheniseHeadshot.jpg";
 import miyuniHeadshot from "../../assets/miyuniHeadshot.jpeg";
-import chelakaHeadshot from "../../assets/chelakaHeadshot.jpg";
-import lakshiHeadshot from "../../assets/lakshiHeadshot.jpg";
+import chelakaHeadshot from "../../assets/chelakaHeadshot.webp";
+import lakshiHeadshot from "../../assets/lakshiHeadshot.webp";
 import ranudiHeadshot from "../../assets/ranudiHeadshot.jpeg";
 import ImanHeadshot from "../../assets/ImanHeadshot.jpeg";
 import dindiHeadshot from "../../assets/dindiHeadshot.webp";
@@ -187,6 +187,7 @@ const DrivingForce = () => {
                       src={person.image || person.imageUrl}
                       alt={person.name}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                     {/* Hover effect */}
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
