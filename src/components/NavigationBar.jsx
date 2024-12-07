@@ -130,9 +130,7 @@ const NavigationBar = () => {
               transition={{ type: "spring", stiffness: 100 }}
               className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
               style={{
-                backgroundImage: `url(${mobileNav})`, // Apply the image URL directly
-                backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundColor: "#000000", // Replace with your desired color
               }}
             >
               <div className="flex items-center justify-between">
@@ -157,7 +155,7 @@ const NavigationBar = () => {
                         <div key={item.name}>
                           <button
                             onClick={() => setMembersMenuOpen(!membersMenuOpen)} // Toggle dropdown visibility
-                            className="block text-base font-semibold text-gray-300 font-assassin text-[31px]"
+                            className="block font-semibold text-gray-300 font-assassin text-[25px]"
                           >
                             {item.name}
                           </button>
@@ -175,7 +173,7 @@ const NavigationBar = () => {
                                   <a
                                     key={subItem.name}
                                     href={subItem.href}
-                                    className="block text-[16px] py-1 text-gray-300 hover:bg-gray-700 font-assassin rounded-lg px-3"
+                                    className="block text-[25px] py-1 text-gray-300 hover:bg-gray-700 font-assassin rounded-lg px-3"
                                   >
                                     {subItem.name}
                                   </a>
@@ -188,7 +186,7 @@ const NavigationBar = () => {
                         <a
                           key={item.name}
                           href={item.href}
-                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[31px]"
+                          className="-mx-3 block rounded-lg px-3 py-2 font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[25px]"
                         >
                           {item.name}
                         </a>
@@ -198,7 +196,7 @@ const NavigationBar = () => {
                   <div className="py-6">
                     <a
                       href="https://tripetto.app/run/3QUIZ3HBI8"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[31px]"
+                      className="-mx-3 block rounded-lg px-3 py-2.5 font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[25px]"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

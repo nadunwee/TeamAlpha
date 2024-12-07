@@ -71,7 +71,7 @@ const DrivingForce = () => {
         imageUrl: nadunHeadshot,
       },
     ],
-    "Research and Developments": [
+    "Research and Development": [
       {
         name: "Rishini",
         role: "Coordinator",
@@ -105,7 +105,7 @@ const DrivingForce = () => {
         imageUrl: afthahHeadshot,
       },
     ],
-    "Participants Engagement": [
+    "Participants Engagement and Experience": [
       {
         name: "Iman",
         role: "Coordinator",

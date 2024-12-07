@@ -68,7 +68,7 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left flex-1 mb-6 md:mb-0">
           <h3 className="mb-4 text-lg font-bold uppercase tracking-wide">
-            Contact Us
+            Follow Our Alpha Socials
           </h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>Email: teamalpha.racsliit@gmail.com</li>

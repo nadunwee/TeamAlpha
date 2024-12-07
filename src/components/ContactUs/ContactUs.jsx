@@ -9,7 +9,7 @@ import Footer from "../Footer/Footer";
 const ContactUs = () => {
   const contacts = [
     {
-      name: "Miyuni De Almeda",
+      name: "Miyuni De Almeida",
       role: "Co-Chair",
       phone: "+94 74 064 8721",
       email: "miyunia.racsliit@gmail.com",
@@ -30,7 +30,7 @@ const ContactUs = () => {
       image: ImanHeadshot,
     },
     {
-      name: "Ranudi Kaluaratchi",
+      name: "Ranudi Kaluarachchi",
       role: "Participants Engagement and Experience",
       phone: "+94 74 102 9481",
       email: "ranudik.racsliit@gmail.com",
