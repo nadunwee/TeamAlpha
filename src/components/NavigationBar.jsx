@@ -3,7 +3,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
-import mobileNav from "../assets/mobileNav.png"; // Ensure correct path to the image
 import alphaLogo from "../assets/alphaLogo.png";
 
 // Navigation links with Members dropdown
@@ -130,13 +129,14 @@ const NavigationBar = () => {
               transition={{ type: "spring", stiffness: 100 }}
               className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
               style={{
-                backgroundColor: "#000000", // Replace with your desired color
+                backgroundColor: "#000000",
               }}
             >
               <div className="flex items-center justify-between">
-                <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">team alpha</span>
-                  <img alt="" src={alphaLogo} className="h-8 w-auto" />
+                <a href="/" className="-m-1.5 p-1.5">
+                  <span className="text-lg font-bold text-white font-assassin text-[40px]">
+                    Team Alpha
+                  </span>
                 </a>
                 <button
                   type="button"
@@ -147,6 +147,7 @@ const NavigationBar = () => {
                   <XMarkIcon aria-hidden="true" className="h-6 w-6" />
                 </button>
               </div>
+
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
