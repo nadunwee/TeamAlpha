@@ -38,11 +38,14 @@ const WhatIsTeamAlpha = () => {
               what is team alpha
             </h2>
             <p className="mt-8 text-[25px] font-bold sm:text-[30px] font-assassin">
-              team alpha is a team-building event by the rotaract club of sliit,
-              aimed at inspiring leadership, teamwork, and growth among sri
-              lankan youth by combining challenging activities, professional
-              insights, and lasting memories, fostering camaraderie and
-              resilience.
+              after a five-year break, the rotaract club of sliit’s professional
+              development avenue proudly revives this legacy event with a fresh
+              military-themed twist. team alpha offers immersive team-building
+              challenges, insightful sessions from experienced speakers, and a
+              chance to grow, connect, and lead. designed for dynamic youth,
+              this event blends practical life skills, leadership, and
+              camaraderie. step out of your comfort zone, embrace the adventure,
+              and create lasting memories with team alpha.
             </p>
           </motion.div>
 
