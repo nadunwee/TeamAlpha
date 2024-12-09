@@ -65,7 +65,7 @@ const NavigationBar = () => {
         <div className="hidden lg:flex lg:gap-x-12 font-assassin text-6xl">
           {navigation.map((item) =>
             item.subLinks ? (
-              <div key={item.name} className="relative group mt-[-23px]">
+              <div key={item.name} className="relative group mt-[-23.5px]">
                 <button className={`${navClass} text-[24px]`}>
                   {item.name}
                 </button>
