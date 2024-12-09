@@ -74,7 +74,7 @@ const FAQ = () => {
     },
     {
       question: "How fun will it be?",
-      answer: "EXTRMELY F****** Fun my dear creed brother!!!",
+      answer: "EXTREMELY F****** Fun my dear creed brother!!!",
     },
   ];
 

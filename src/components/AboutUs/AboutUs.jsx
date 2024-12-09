@@ -2,7 +2,7 @@ import { motion } from "framer-motion"; // Import motion from framer-motion
 import NavigationBar from "../NavigationBar";
 import sliitLogo from "../../assets/sliitLogo.png";
 import rotaLogo from "../../assets/rotaract.png";
-import racsliitLogo from "../../assets/racsliitLogo.png";
+import racsliitLogo from "../../assets/racsliitLogo2.png";
 import Footer from "../Footer/Footer";
 
 const AboutUs = () => {
@@ -44,7 +44,7 @@ const AboutUs = () => {
             <img
               alt="sliit logo"
               src={sliitLogo}
-              className="rounded-lg bg-gray-100 w-full sm:w-3/4 lg:w-1/2 mx-auto"
+              className="rounded-lg bg-gray-100 w-[30px] sm:w-3/4 lg:w-1/2 mx-auto"
             />
           </motion.div>
         </div>
@@ -59,11 +59,11 @@ const AboutUs = () => {
               what is rotaract
             </h2>
             <p className="mt-4 text-gray-500 font-assassin text-[30px]">
-              rotaract is a global youth movement founded in 1968 by Rotary
-              International, aimed at empowering youth to make a meaningful
-              impact. across 155+ countries, Rotaract fosters personal and
+              rotaract is a global youth movement founded in 1968 by rotary
+              international, aimed at empowering youth to make a meaningful
+              impact. across 155+ countries, rotaract fosters personal and
               professional growth, community service, and international
-              understanding. Clubs, based in communities or institutions, unite
+              understanding. clubs, based in communities or institutions, unite
               members through fellowship and a shared commitment to addressing
               global and local needs.
             </p>
@@ -77,7 +77,7 @@ const AboutUs = () => {
             <img
               alt="rotaract logo"
               src={rotaLogo}
-              className="rounded-lg bg-gray-100 w-full sm:w-3/4 lg:w-1/2 mx-auto"
+              className="rounded-lg bg-gray-100 w-[90px] sm:w-3/4 lg:w-1/2 mx-auto"
             />
           </motion.div>
         </div>
@@ -92,13 +92,13 @@ const AboutUs = () => {
               what is racsliit
             </h2>
             <p className="mt-4 text-gray-500 font-assassin text-[30px]">
-              The Rotaract Club of SLIIT , established in 2013, under the Rotary
-              Club of Battaramulla, unites sliit undergraduates from diverse
-              fields to serve the community. Known for its impactful projects,
+              the rotaract club of sliit , established in 2013, under the rotary
+              club of battaramulla, unites sliit undergraduates from diverse
+              fields to serve the community. known for its impactful projects,
               the club empowers members and students alike to make a meaningful
-              difference, embodying the motto “Yes, I can!” With a commitment to
+              difference, embodying the motto “yes, i can” with a commitment to
               peace, harmony, and collaboration, the club represents the spirit
-              of SLIIT while striving to uplift Sri Lankan society with honesty
+              of sliit while striving to uplift sri lankan society with honesty
               and dedication.
             </p>
           </motion.div>
@@ -111,7 +111,7 @@ const AboutUs = () => {
             <img
               alt="rotaract logo"
               src={racsliitLogo}
-              className="rounded-lg bg-gray-100 w-full sm:w-3/4 lg:w-1/2 mx-auto"
+              className="rounded-lg bg-gray-100 w-[300px] sm:w-3/4 lg:w-1/2 mx-auto"
             />
           </motion.div>
         </div>
