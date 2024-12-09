@@ -59,11 +59,10 @@ const AboutUs = () => {
               what is rotaract
             </h2>
             <p className="mt-4 text-gray-500 font-assassin text-[30px]">
-              Rotaract is a global youth movement founded in 1968 by Rotary
-              International, aimed at empowering individuals aged 18 to 30 to
-              make a meaningful impact. With over 9,100 clubs across 170+
-              countries and around 210,000 members, Rotaract fosters personal
-              and professional growth, community service, and international
+              rotaract is a global youth movement founded in 1968 by Rotary
+              International, aimed at empowering youth to make a meaningful
+              impact. across 155+ countries, Rotaract fosters personal and
+              professional growth, community service, and international
               understanding. Clubs, based in communities or institutions, unite
               members through fellowship and a shared commitment to addressing
               global and local needs.
@@ -93,14 +92,14 @@ const AboutUs = () => {
               what is racsliit
             </h2>
             <p className="mt-4 text-gray-500 font-assassin text-[30px]">
-              The Rotaract Club of SLIIT , established on June 20, 2013, under
-              the Rotary Club of Battaramulla, unites SLIIT undergraduates from
-              diverse fields to serve the community. Known for its impactful
-              projects, the club empowers members and students alike to make a
-              meaningful difference, embodying the motto “Yes, I can!” With a
-              commitment to peace, harmony, and collaboration, the club
-              represents the spirit of SLIIT while striving to uplift Sri Lankan
-              society with honesty and dedication.
+              The Rotaract Club of SLIIT , established in 2013, under the Rotary
+              Club of Battaramulla, unites sliit undergraduates from diverse
+              fields to serve the community. Known for its impactful projects,
+              the club empowers members and students alike to make a meaningful
+              difference, embodying the motto “Yes, I can!” With a commitment to
+              peace, harmony, and collaboration, the club represents the spirit
+              of SLIIT while striving to uplift Sri Lankan society with honesty
+              and dedication.
             </p>
           </motion.div>
 
