@@ -44,7 +44,7 @@ const AboutUs = () => {
             <img
               alt="sliit logo"
               src={sliitLogo}
-              className="rounded-lg bg-gray-100 w-[30px] sm:w-3/4 lg:w-1/2 mx-auto"
+              className="rounded-lg bg-gray-100 w-full sm:w-3/4 lg:w-1/2 mx-auto"
             />
           </motion.div>
         </div>
@@ -79,7 +79,7 @@ const AboutUs = () => {
             <img
               alt="rotaract logo"
               src={rotaLogo}
-              className="rounded-lg bg-gray-100 w-[90px] sm:w-3/4 lg:w-1/2 mx-auto"
+              className="rounded-lg bg-gray-100 w-full sm:w-3/4 lg:w-1/2 mx-auto"
             />
           </motion.div>
         </div>
