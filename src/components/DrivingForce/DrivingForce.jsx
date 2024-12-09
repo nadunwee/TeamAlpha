@@ -19,6 +19,7 @@ import ranudiHeadshot from "../../assets/ranudiHeadshot.jpeg";
 import ImanHeadshot from "../../assets/ImanHeadshot.jpeg";
 import dindiHeadshot from "../../assets/dindiHeadshot.webp";
 import TharushimaHeadshot from "../../assets/TharushimaHeadshot.jpg";
+import nadaliHeadshot from "../../assets/nadaliHeadshot.jpeg";
 import Footer from "../Footer/Footer";
 
 const DrivingForce = () => {
@@ -103,6 +104,11 @@ const DrivingForce = () => {
         name: "Aftha",
         role: "Member",
         imageUrl: afthahHeadshot,
+      },
+      {
+        name: "Nadali",
+        role: "Member",
+        imageUrl: nadaliHeadshot,
       },
     ],
     "Participants Engagement and Experience": [

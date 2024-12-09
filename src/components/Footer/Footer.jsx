@@ -13,10 +13,9 @@ const Footer = () => {
             className="w-24 mb-4 md:w-40"
           />
           <p className="text-sm leading-relaxed text-gray-300 w-full ">
-            As a dynamic gathering of young change-makers, we're here to channel
-            our energy into impactful projects, ignite inspiration, and redefine
-            what's possible. Join us in sculpting a future that's not just about
-            us, but for us all.
+            Rotaract is a global movement, Empowering youth to make a meaningful
+            impact fostering personal and professional growth, community service
+            and international understanding.
           </p>
           <div className="flex gap-4 mt-6">
             <li className="flex items-center">
