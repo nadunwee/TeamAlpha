@@ -3,7 +3,7 @@ import DrivingForce from "../DrivingForce";
 import NavigationBar from "../NavigationBar";
 import HomePagePartners from "./HomePagePartners";
 import WhatIsTeamAlpha from "./WhatIsTeamAlpha";
-import backgroundImg from "../../assets/newback.jpg";
+import backgroundImg from "../../assets/newback.webp";
 import { useEffect, useState } from "react";
 import CountDown from "./CountDown";
 import Footer from "../Footer/Footer";
@@ -13,6 +13,7 @@ import bluredImg from "../../assets/bluredImg.png";
 export default function HomePage() {
   return (
     <>
+      <NavigationBar />
       <div
         style={{
           backgroundImage: `url(${backgroundImg})`,
@@ -21,8 +22,6 @@ export default function HomePage() {
         }}
         className="bg-white"
       >
-        <NavigationBar />
-
         <motion.div
           className="relative isolate px-6 pt-14 lg:px-8"
           initial={{ opacity: 0 }}
@@ -112,8 +111,8 @@ export default function HomePage() {
         {/* <CountDown /> */}
         {/* <HomePagePartners /> */}
         <PastEvents />
-        <WhatIsTeamAlpha />
       </div>
+      <WhatIsTeamAlpha />
       <Footer />
     </>
   );

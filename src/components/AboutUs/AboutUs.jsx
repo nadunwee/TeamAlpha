@@ -24,10 +24,15 @@ const AboutUs = () => {
               what is sliit
             </p>
             <p className="mt-4 text-gray-500 font-assassin text-[30px]">
-              The walnut wood card tray is precision milled to perfectly fit a
-              stack of Focus cards. The powder coated steel divider separates
-              active cards from new ones, or can be used to archive important
-              task lists.
+              the sri lanka institute of information technology, , is a leading
+              non-state, degree-awarding institute recognized by the ugc.
+              accredited by global bodies like the institution of engineering,
+              technology, uk, sliit offers diverse programs in fields such as
+              computing, engineering, business, and psychology. known for
+              producing skilled, employable graduates, secure jobs within six
+              months of graduation. beyond academics, sliit enhances students’
+              soft skills through vibrant clubs like the rotaract club,
+              fostering leadership and community engagement.
             </p>
           </motion.div>
 
@@ -54,10 +59,14 @@ const AboutUs = () => {
               what is rotaract
             </h2>
             <p className="mt-4 text-gray-500 font-assassin text-[30px]">
-              The walnut wood card tray is precision milled to perfectly fit a
-              stack of Focus cards. The powder coated steel divider separates
-              active cards from new ones, or can be used to archive important
-              task lists.
+              Rotaract is a global youth movement founded in 1968 by Rotary
+              International, aimed at empowering individuals aged 18 to 30 to
+              make a meaningful impact. With over 9,100 clubs across 170+
+              countries and around 210,000 members, Rotaract fosters personal
+              and professional growth, community service, and international
+              understanding. Clubs, based in communities or institutions, unite
+              members through fellowship and a shared commitment to addressing
+              global and local needs.
             </p>
           </motion.div>
 
@@ -84,10 +93,14 @@ const AboutUs = () => {
               what is racsliit
             </h2>
             <p className="mt-4 text-gray-500 font-assassin text-[30px]">
-              The walnut wood card tray is precision milled to perfectly fit a
-              stack of Focus cards. The powder coated steel divider separates
-              active cards from new ones, or can be used to archive important
-              task lists.
+              The Rotaract Club of SLIIT , established on June 20, 2013, under
+              the Rotary Club of Battaramulla, unites SLIIT undergraduates from
+              diverse fields to serve the community. Known for its impactful
+              projects, the club empowers members and students alike to make a
+              meaningful difference, embodying the motto “Yes, I can!” With a
+              commitment to peace, harmony, and collaboration, the club
+              represents the spirit of SLIIT while striving to uplift Sri Lankan
+              society with honesty and dedication.
             </p>
           </motion.div>
 

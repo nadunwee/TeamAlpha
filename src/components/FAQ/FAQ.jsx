@@ -15,7 +15,7 @@ const FAQ = () => {
         "You can contact us via the email or phone number provided on the Contact Us page.",
     },
     {
-      question: "Where can I find more information?",
+      question: "Where can I find more information daa?",
       answer:
         "Additional details are available in the technical specifications section.",
     },

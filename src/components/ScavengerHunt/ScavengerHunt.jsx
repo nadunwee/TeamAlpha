@@ -1,6 +1,6 @@
 import React from "react";
 import NavigationBar from "../NavigationBar";
-import backgroundImg from "../../assets/newback.jpg";
+import backgroundImg from "../../assets/newback.webp";
 
 const ScavengerHunt = () => {
   return (

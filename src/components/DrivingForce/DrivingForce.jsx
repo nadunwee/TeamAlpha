@@ -13,10 +13,12 @@ import manithHeadshot from "../../assets/manithHeadshot.jpg";
 import rishiniHeadshot from "../../assets/rishiniHeadshot.jpg";
 import sheniseHeadshot from "../../assets/sheniseHeadshot.jpg";
 import miyuniHeadshot from "../../assets/miyuniHeadshot.jpeg";
-import chelakaHeadshot from "../../assets/chelakaHeadshot.jpg";
-import lakshiHeadshot from "../../assets/lakshiHeadshot.jpg";
+import chelakaHeadshot from "../../assets/chelakaHeadshot.webp";
+import lakshiHeadshot from "../../assets/lakshiHeadshot.webp";
 import ranudiHeadshot from "../../assets/ranudiHeadshot.jpeg";
 import ImanHeadshot from "../../assets/ImanHeadshot.jpeg";
+import dindiHeadshot from "../../assets/dindiHeadshot.webp";
+import TharushimaHeadshot from "../../assets/TharushimaHeadshot.jpg";
 import Footer from "../Footer/Footer";
 
 const DrivingForce = () => {
@@ -61,8 +63,7 @@ const DrivingForce = () => {
       {
         name: "Dinadi",
         role: "Member",
-        imageUrl:
-          "https://images.unsplash.com/photo-1502767089025-ed319e8c0c96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        imageUrl: dindiHeadshot,
       },
       {
         name: "Nadun",
@@ -70,7 +71,7 @@ const DrivingForce = () => {
         imageUrl: nadunHeadshot,
       },
     ],
-    "Research and Developments": [
+    "Research and Development": [
       {
         name: "Rishini",
         role: "Coordinator",
@@ -104,7 +105,7 @@ const DrivingForce = () => {
         imageUrl: afthahHeadshot,
       },
     ],
-    "Participants Engagement": [
+    "Participants Engagement and Experience": [
       {
         name: "Iman",
         role: "Coordinator",
@@ -126,6 +127,11 @@ const DrivingForce = () => {
         name: "Udeep",
         role: "Member",
         imageUrl: UdeepHeadshort,
+      },
+      {
+        name: "Tharushima",
+        role: "Member",
+        imageUrl: TharushimaHeadshot,
       },
     ],
   };
@@ -181,6 +187,7 @@ const DrivingForce = () => {
                       src={person.image || person.imageUrl}
                       alt={person.name}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                     {/* Hover effect */}
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

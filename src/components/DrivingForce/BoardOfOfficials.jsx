@@ -1,38 +1,45 @@
+import { useState, lazy, Suspense } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { motion } from "framer-motion";
-import NavigationBar from "../NavigationBar";
-import jayodHeadshot from "../../assets/jayodHeadshot.jpg";
-import manishaHeadshot from "../../assets/manishaHeadshot.jpg";
-import yasithHeadshot from "../../assets/yasithHeadshot.jpg";
-import charithHeadshot from "../../assets/charithHeadshot.jpg";
-import amandiHeadshot from "../../assets/amandiHeadshot.jpg";
-import dinuriBodHeadshot from "../../assets/dinuriBodHeadshot.jpg";
-import dulashaHeadshot from "../../assets/dulashaHeadshot.jpg";
-import tanuriHeadshot from "../../assets/tanuriHeadshot.jpg";
-import kavishaHeadshot from "../../assets/kavishaHeadshot.jpg";
-import tehanHeadshot from "../../assets/tehanHeadshot.jpg";
-import ranukaHeadshot from "../../assets/ranukaHeadshot.jpg";
-import tariniHeadshot from "../../assets/tariniHeadshot.jpg";
-import sheniseHeadshot from "../../assets/sheniseHeadshot.jpg";
-import danushkarHeadshot from "../../assets/danushkarHeadshot.jpg";
-import seraHeadshot from "../../assets/seraHeadshot.jpg";
-import shameenaHeadshot from "../../assets/shameenaHeadshot.jpg";
-import geminiHeadshot from "../../assets/geminiHeadshot.jpg";
-import chelakaHeadshot from "../../assets/chelakaHeadshot.jpg";
-import lakshithaHeadshot from "../../assets/lakshiHeadshot.jpg";
-import theepthiHeadshot from "../../assets/theepthiHeadshot.jpg";
-import bishruHeadshot from "../../assets/bishruHeadshot.jpg";
-import thisusHeadshot from "../../assets/thisusHeadshot.jpg";
-import muhammedHeadshot from "../../assets/muhammedHeadshot.jpg";
-import kisajaHeadshot from "../../assets/kisajaHeadshot.jpg";
-import shanjaiHeadshot from "../../assets/shanjaiHeadshot.jpg";
-import minupaHeadshot from "../../assets/minupaHeadshot.jpg";
-import harithraHeadshot from "../../assets/harithraHeadshot.jpg";
-import dasuniHeadshot from "../../assets/dasuniHeadshot.jpg";
-import duwaragieHeadshot from "../../assets/duwaragieHeadshot.jpg";
-import vimethHeadshot from "../../assets/vimethHeadshot.jpg";
-import Footer from "../Footer/Footer";
+
+const NavigationBar = lazy(() => import("../NavigationBar"));
+const Footer = lazy(() => import("../Footer/Footer"));
+
+import jayodHeadshot from "../../assets/jayodHeadshot.webp";
+import manishaHeadshot from "../../assets/manishaHeadshot.webp";
+import yasithHeadshot from "../../assets/yasithHeadshot.webp";
+import charithHeadshot from "../../assets/charithHeadshot.webp";
+import amandiHeadshot from "../../assets/amandiHeadshot.webp";
+import dinuriBodHeadshot from "../../assets/dinuriBodHeadshot.webp";
+import dulashaHeadshot from "../../assets/dulashaHeadshot.webp";
+import tanuriHeadshot from "../../assets/tanuriHeadshot.webp";
+import kavishaHeadshot from "../../assets/kavishaHeadshot.webp";
+import tehanHeadshot from "../../assets/tehanHeadshot.webp";
+import ranukaHeadshot from "../../assets/ranukaHeadshot.webp";
+import tariniHeadshot from "../../assets/tariniHeadshot.webp";
+import danushkarHeadshot from "../../assets/danushkarHeadshot.webp";
+import seraHeadshot from "../../assets/seraHeadshot.webp";
+import shameenaHeadshot from "../../assets/shameenaHeadshot.webp";
+import geminiHeadshot from "../../assets/geminiHeadshot.webp";
+import chelakaHeadshot from "../../assets/chelakaHeadshot.webp";
+import lakshithaHeadshot from "../../assets/lakshiHeadshot.webp";
+import theepthiHeadshot from "../../assets/theepthiHeadshot.webp";
+import bishruHeadshot from "../../assets/bishruHeadshot.webp";
+import thisusHeadshot from "../../assets/thisusHeadshot.webp";
+import muhammedHeadshot from "../../assets/muhammedHeadshot.webp";
+import kisajaHeadshot from "../../assets/kisajaHeadshot.webp";
+import shanjaiHeadshot from "../../assets/shanjaiHeadshot.webp";
+import minupaHeadshot from "../../assets/minupaHeadshot.webp";
+import harithraHeadshot from "../../assets/harithraHeadshot.webp";
+import dasuniHeadshot from "../../assets/dasuniHeadshot.webp";
+import duwaragieHeadshot from "../../assets/duwaragieHeadshot.webp";
+import vimethHeadshot from "../../assets/vimethHeadshot.webp";
 
 const BoardOfOfficials = () => {
+  const ITEMS_PER_PAGE = 29; // Number of items to show initially and per load
+  const [visibleItems, setVisibleItems] = useState(ITEMS_PER_PAGE);
+
   const categories = {
     president: [
       {
@@ -200,15 +207,22 @@ const BoardOfOfficials = () => {
     visible: { opacity: 1, scale: 1 },
   };
 
+  const handleLoadMore = () => {
+    setVisibleItems((prev) => prev + ITEMS_PER_PAGE);
+  };
+
   return (
     <>
       <div
         className="bg-cover bg-center py-12 sm:py-16 lg:py-24"
         style={{ backgroundColor: "#CDB898" }} // Replace with the actual image path
       >
-        <NavigationBar />
+        <Suspense fallback={<div>Loading Navigation Bar...</div>}>
+          <NavigationBar />
+        </Suspense>
+
         <div className="flex flex-col items-center gap-12 px-4 sm:px-8 lg:px-16">
-          <p className="font-assassin text-[35px] lg:text-[80px] mt-[50px] sm:mt-[50px] mb-[10px]">
+          <p className="font-assassin text-[35px] lg:text-[80px] mt-[50px] sm:mt-[20px]">
             racsliit board of officials
           </p>
 
@@ -222,16 +236,17 @@ const BoardOfOfficials = () => {
             >
               {/* People Cards */}
               <div className="flex flex-wrap justify-center gap-6 sm:gap-8 lg:gap-12">
-                {people.map((person) => (
+                {people.slice(0, visibleItems).map((person) => (
                   <motion.div
                     key={person.name}
                     className="group relative w-64 sm:w-72 h-40 sm:h-48 lg:h-56 rounded-lg overflow-hidden shadow-lg"
                     variants={itemVariants}
                   >
-                    {/* Image */}
-                    <img
+                    {/* Lazy-loaded Image */}
+                    <LazyLoadImage
                       src={person.image || person.imageUrl}
                       alt={person.name}
+                      effect="blur" // Adds blur effect while loading
                       className="w-full h-full object-cover"
                     />
                     {/* Hover effect */}
@@ -246,11 +261,24 @@ const BoardOfOfficials = () => {
                   </motion.div>
                 ))}
               </div>
+
+              {/* Load More Button */}
+              {visibleItems < people.length && (
+                <button
+                  onClick={handleLoadMore}
+                  className="mt-6 px-4 py-2 bg-black text-white rounded-md"
+                >
+                  Load More
+                </button>
+              )}
             </motion.div>
           ))}
         </div>
       </div>
-      <Footer />
+
+      <Suspense fallback={<div>Loading Footer...</div>}>
+        <Footer />
+      </Suspense>
     </>
   );
 };

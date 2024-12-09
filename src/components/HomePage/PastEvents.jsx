@@ -5,9 +5,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade"; // Import fade effect CSS
-import past1 from "../../assets/past1.png";
-import past2 from "../../assets/past2.png";
-import past3 from "../../assets/past3.png";
+import past1 from "../../assets/past1.webp";
+import past2 from "../../assets/past2.webp";
+import past3 from "../../assets/past3.webp";
 
 const PastEvents = () => {
   const images = [past1, past2, past3];
