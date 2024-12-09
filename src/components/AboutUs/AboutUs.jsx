@@ -59,13 +59,15 @@ const AboutUs = () => {
               what is rotaract
             </h2>
             <p className="mt-4 text-gray-500 font-assassin text-[30px]">
-              rotaract is a global youth movement founded in 1968 by rotary
+              rotaract is a global youth movement founded in {""}
+              <seciton className="text-[25px]">1968</seciton> by rotary
               international, aimed at empowering youth to make a meaningful
-              impact. across 155+ countries, rotaract fosters personal and
-              professional growth, community service, and international
-              understanding. clubs, based in communities or institutions, unite
-              members through fellowship and a shared commitment to addressing
-              global and local needs.
+              impact. across{" "}
+              <span className="text-[25px] m-0 p-0 w-fit">155+</span> countries,
+              rotaract fosters personal and professional growth, community
+              service, and international understanding. clubs, based in
+              communities or institutions, unite members through fellowship and
+              a shared commitment to addressing global and local needs.
             </p>
           </motion.div>
 
@@ -92,10 +94,11 @@ const AboutUs = () => {
               what is racsliit
             </h2>
             <p className="mt-4 text-gray-500 font-assassin text-[30px]">
-              the rotaract club of sliit , established in 2013, under the rotary
-              club of battaramulla, unites sliit undergraduates from diverse
-              fields to serve the community. known for its impactful projects,
-              the club empowers members and students alike to make a meaningful
+              the rotaract club of sliit , established in{" "}
+              <span className="text-[25px]">2013</span>, under the rotary club
+              of battaramulla, unites sliit undergraduates from diverse fields
+              to serve the community. known for its impactful projects, the club
+              empowers members and students alike to make a meaningful
               difference, embodying the motto “yes, i can” with a commitment to
               peace, harmony, and collaboration, the club represents the spirit
               of sliit while striving to uplift sri lankan society with honesty
