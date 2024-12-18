@@ -74,7 +74,10 @@ const bannerLogos = [
 
 const Partners = () => {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div
+      className="bg-cover bg-center py-12 sm:py-16 lg:py-24"
+      style={{ backgroundColor: "#CDB898" }}
+    >
       <NavigationBar />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-lg font-semibold text-gray-900">
