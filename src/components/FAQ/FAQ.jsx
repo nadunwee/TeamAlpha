@@ -73,6 +73,14 @@ const FAQ = () => {
         "Comfortable and safe tents will be provided from the Venue itself to provide you with the BEST OF THE BEST camping experience like nothing you’ve ever had. ",
     },
     {
+      question: "Is the Internet there good",
+      answer: "of course it is",
+    },
+    {
+      question: "When will it be held",
+      answer: "we're planning to hold this on 22nd of february 2025",
+    },
+    {
       question: "How fun will it be?",
       answer: "EXTREMELY F****** Fun my dear creed brother!!!",
     },
