@@ -215,7 +215,7 @@ const BoardOfOfficials = () => {
     <>
       <div
         className="bg-cover bg-center py-12 sm:py-16 lg:py-24"
-        style={{ backgroundColor: "#CDB898" }} // Replace with the actual image path
+        style={{ backgroundColor: "#CDB898" }}
       >
         <Suspense fallback={<div>Loading Navigation Bar...</div>}>
           <NavigationBar />
