@@ -25,55 +25,52 @@ const titlePartner = [
 const bannerLogos = [
   {
     src: viskamMorters,
-    alt: "Transistor",
+    alt: "visaka moters",
   },
   {
     src: princeJewel,
-    alt: "Reform",
+    alt: "prince jewel",
   },
   {
     src: sgm,
-    alt: "SavvyCal",
+    alt: "sgm",
   },
   {
     src: meegasSewana,
-    alt: "Statamic",
+    alt: "meegas sewana",
   },
   {
     src: viskamIndustries,
-    alt: "Statamic",
+    alt: "viskam industries",
   },
   {
     src: sandasiriFlorist,
-    alt: "Statamic",
+    alt: "sandasiri florist",
   },
   {
     src: chandrikaHotel,
-    alt: "Statamic",
+    alt: "chandrika hotel",
   },
   {
     src: SusanthaPathinana,
-    alt: "Statamic",
+    alt: "susantha pathinan",
   },
   {
     src: ShanthaGems,
-    alt: "Statamic",
+    alt: "shantha gems",
   },
   {
     src: lecson,
-    alt: "dsflj",
+    alt: "lecson",
   },
 ];
 
-const photographyPartner = [
-  { src: tushanPrinting, alt: "photography partner" },
-];
+const photographyPartner = [{ src: tushanPrinting, alt: "tushan printing" }];
 
-const associatePartners = [{ src: cargills, alt: "" }];
+const associatePartners = [{ src: cargills, alt: "cargills" }];
 
 const Partners = () => {
-  // Create repeated logos for seamless scrolling
-  const repeatedLogos = [...bannerLogos, ...bannerLogos];
+  const repeatedLogos = [...bannerLogos, ...bannerLogos, ...bannerLogos];
 
   return (
     <>
@@ -112,7 +109,7 @@ const Partners = () => {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-10">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12 mb-12">
           <h2 className="text-center text-[25px] font-semibold text-gray-900">
             Our Printing Partner
           </h2>
@@ -121,37 +118,31 @@ const Partners = () => {
               className="flex justify-center items-center"
               style={{ width: "100%", display: "flex" }}
             >
-              {photographyPartner.length > 0 ? (
-                photographyPartner.map((logo, index) => (
-                  <img
-                    key={index}
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="max-h-24 w-auto object-contain"
-                    width={158}
-                    height={48}
-                  />
-                ))
-              ) : (
-                <p className="text-center text-gray-500">
-                  No Printing Partner Found.
-                </p>
-              )}
+              {photographyPartner.map((logo, index) => (
+                <img
+                  key={index}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-h-24 w-auto object-contain"
+                  width={158}
+                  height={48}
+                />
+              ))}
             </motion.div>
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-12">
           <h2 className="text-center text-[25px] font-semibold text-gray-900">
-            Our Complimentry Partners
+            Our Complimentary Partners
           </h2>
           <div className="mt-10 overflow-hidden relative">
             <motion.div
               className="flex space-x-8"
               initial={{ x: 0 }}
-              animate={{ x: `-${bannerLogos.length * 158}px` }} // Scroll width for one set
+              animate={{ x: `-${bannerLogos.length * 158}px` }}
               transition={{
-                duration: 20, // Adjust scroll speed
+                duration: 20,
                 ease: "linear",
                 repeat: Infinity,
               }}

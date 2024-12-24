@@ -64,7 +64,7 @@ const NavigationBar = () => {
           </button>
         </div>
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex lg:gap-x-12 font-assassin text-6xl items-center">
+        <div className="hidden lg:flex lg:gap-x-8 font-assassin text-6xl items-center">
           {navigation.map((item) =>
             item.subLinks ? (
               <div key={item.name} className="relative group mt-[-22px]">
