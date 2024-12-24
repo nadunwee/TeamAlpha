@@ -16,7 +16,7 @@ const navigation = [
       { name: "team alpha oc", href: "/driving-force" },
     ],
   },
-  { name: "partners", href: "/partners" },
+  { name: "our partners", href: "/partners" },
   { name: "scavenger hunt", href: "/scavenger-hunt" },
   { name: "faq", href: "/faq" },
   { name: "contact us", href: "/contact-us" },

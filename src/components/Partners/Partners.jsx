@@ -1,154 +1,180 @@
 import React from "react";
 import { motion } from "framer-motion";
 import NavigationBar from "../NavigationBar";
+import Footer from "../Footer/Footer";
+import viskamMorters from "../../assets/partners/Viskam_Motors_Service_Centre.jpeg";
+import princeJewel from "../../assets/partners/prince_jewel_house.png";
+import sgm from "../../assets/partners/sgm.jpeg";
+import meegasSewana from "../../assets/partners/meegas_sewana_resort.png";
+import viskamIndustries from "../../assets/partners/viskam_industries.jpeg";
+import sandasiriFlorist from "../../assets/partners/sandasiri_florist.jpeg";
+import tushanPrinting from "../../assets/partners/tushanPtohography.jpeg";
+import cargills from "../../assets/partners/cargills.png";
+import chandrikaHotel from "../../assets/partners/chandrikaHotel.jpeg";
+import SusanthaPathinana from "../../assets/partners/Susantha_pathinana.jpeg";
+import ShanthaGems from "../../assets/partners/Shantha_gems.jpeg";
+import lecson from "../../assets/partners/lecson.png";
 
-const logos = [
+const titlePartner = [
   {
-    src: "https://tailwindui.com/plus/img/logos/158x48/transistor-logo-gray-900.svg",
-    alt: "Transistor",
-  },
-  {
-    src: "https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg",
-    alt: "Reform",
-  },
-  {
-    src: "https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-gray-900.svg",
-    alt: "SavvyCal",
+    src: viskamMorters,
+    alt: "Viskam Motors Service Centre",
   },
 ];
 
 const bannerLogos = [
   {
-    src: "https://tailwindui.com/plus/img/logos/158x48/transistor-logo-gray-900.svg",
+    src: viskamMorters,
     alt: "Transistor",
   },
   {
-    src: "https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg",
+    src: princeJewel,
     alt: "Reform",
   },
   {
-    src: "https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-gray-900.svg",
+    src: sgm,
     alt: "SavvyCal",
   },
   {
-    src: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
+    src: meegasSewana,
     alt: "Statamic",
   },
   {
-    src: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
+    src: viskamIndustries,
     alt: "Statamic",
   },
   {
-    src: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
+    src: sandasiriFlorist,
     alt: "Statamic",
   },
   {
-    src: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
+    src: chandrikaHotel,
     alt: "Statamic",
   },
   {
-    src: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
+    src: SusanthaPathinana,
     alt: "Statamic",
   },
   {
-    src: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
+    src: ShanthaGems,
     alt: "Statamic",
   },
   {
-    src: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
-    alt: "Statamic",
-  },
-  {
-    src: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
-    alt: "Statamic",
-  },
-  {
-    src: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
-    alt: "Statamic",
-  },
-  {
-    src: "https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg",
-    alt: "Statamic",
+    src: lecson,
+    alt: "dsflj",
   },
 ];
 
-const Partners = () => {
-  return (
-    <div
-      className="bg-cover bg-center py-12 sm:py-16 lg:py-24"
-      style={{ backgroundColor: "#CDB898" }}
-    >
-      <NavigationBar />
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-lg font-semibold text-gray-900">
-          Our Title Partners
-        </h2>
-        <div className="mt-10 overflow-hidden">
-          <motion.div className="flex space-x-8 justify-center w-[calc(158px*8)] mx-auto">
-            {logos.map((logo, index) => (
-              <img
-                key={index}
-                src={logo.src}
-                alt={logo.alt}
-                className="max-h-12 w-auto object-contain"
-                width={158}
-                height={48}
-              />
-            ))}
-          </motion.div>
-        </div>
-      </div>
+const photographyPartner = [
+  { src: tushanPrinting, alt: "photography partner" },
+];
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-20">
-        <h2 className="text-center text-lg font-semibold text-gray-900">
-          Our Banner Partners
-        </h2>
-        <div className="mt-10 overflow-hidden">
-          <motion.div
-            className="flex space-x-8 w-[calc(158px*8)]"
-            animate={{ x: ["0%", "-100%"] }}
-            transition={{
-              duration: 15,
-              ease: "linear",
-              repeat: Infinity,
-            }}
-          >
-            {[...bannerLogos, ...bannerLogos].map((logo, index) => (
-              <img
-                key={index}
-                src={logo.src}
-                alt={logo.alt}
-                className="max-h-12 w-auto object-contain"
-                width={158}
-                height={48}
-              />
-            ))}
-          </motion.div>
+const associatePartners = [{ src: cargills, alt: "" }];
+
+const Partners = () => {
+  // Create repeated logos for seamless scrolling
+  const repeatedLogos = [...bannerLogos, ...bannerLogos];
+
+  return (
+    <>
+      <div
+        className="bg-cover bg-center py-8 sm:py-16 lg:py-24"
+        style={{ backgroundColor: "#CDB898" }}
+      >
+        <NavigationBar />
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-10">
+          <h2 className="text-center text-[25px] font-semibold text-gray-900">
+            Our Associate Partners
+          </h2>
+          <div className="mt-10 overflow-hidden">
+            <motion.div
+              className="flex justify-center items-center"
+              style={{ width: "100%", display: "flex" }}
+            >
+              {associatePartners.length > 0 ? (
+                associatePartners.map((logo, index) => (
+                  <img
+                    key={index}
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="max-h-36 w-auto object-contain"
+                    width={158}
+                    height={48}
+                  />
+                ))
+              ) : (
+                <p className="text-center text-gray-500">
+                  No Printing Partner Found.
+                </p>
+              )}
+            </motion.div>
+          </div>
         </div>
-        <div className="mt-10 overflow-hidden">
-          <motion.div
-            className="flex space-x-8 w-[calc(158px*8)]"
-            animate={{ x: ["-100%", "0%"] }}
-            transition={{
-              duration: 15,
-              ease: "linear",
-              repeat: Infinity,
-            }}
-          >
-            {[...bannerLogos, ...bannerLogos].map((logo, index) => (
-              <img
-                key={index}
-                src={logo.src}
-                alt={logo.alt}
-                className="max-h-12 w-auto object-contain"
-                width={158}
-                height={48}
-              />
-            ))}
-          </motion.div>
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-10">
+          <h2 className="text-center text-[25px] font-semibold text-gray-900">
+            Our Printing Partner
+          </h2>
+          <div className="mt-10 overflow-hidden">
+            <motion.div
+              className="flex justify-center items-center"
+              style={{ width: "100%", display: "flex" }}
+            >
+              {photographyPartner.length > 0 ? (
+                photographyPartner.map((logo, index) => (
+                  <img
+                    key={index}
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="max-h-24 w-auto object-contain"
+                    width={158}
+                    height={48}
+                  />
+                ))
+              ) : (
+                <p className="text-center text-gray-500">
+                  No Printing Partner Found.
+                </p>
+              )}
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-8">
+          <h2 className="text-center text-[25px] font-semibold text-gray-900">
+            Our Complimentry Partners
+          </h2>
+          <div className="mt-10 overflow-hidden relative">
+            <motion.div
+              className="flex space-x-8"
+              initial={{ x: 0 }}
+              animate={{ x: `-${bannerLogos.length * 158}px` }} // Scroll width for one set
+              transition={{
+                duration: 20, // Adjust scroll speed
+                ease: "linear",
+                repeat: Infinity,
+              }}
+              style={{
+                width: `${repeatedLogos.length * 158}px`, // Ensure enough width for smooth looping
+              }}
+            >
+              {repeatedLogos.map((logo, index) => (
+                <img
+                  key={index}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-h-24 w-auto object-contain"
+                  width={158}
+                  height={48}
+                />
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
