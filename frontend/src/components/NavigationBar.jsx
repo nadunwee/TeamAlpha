@@ -109,9 +109,9 @@ const NavigationBar = () => {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-10">
           <a
-            href="https://tripetto.app/run/3QUIZ3HBI8"
+            href="/log-in"
             className="text-[30px] font-semibold text-black font-assassin mt-[-4px]"
-            target="_blank"
+            target="_self"
             rel="noopener noreferrer"
           >
             login
