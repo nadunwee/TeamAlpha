@@ -7,6 +7,7 @@ import BoardOfOfficials from "./components/DrivingForce/BoardOfOfficials";
 import ContactUs from "./components/ContactUs/ContactUs";
 import FAQ from "./components/FAQ/FAQ";
 import ScavengerHunt from "./components/ScavengerHunt/ScavengerHunt";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/scavenger-hunt" element={<ScavengerHunt />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/log-in" element={<Login />} />
       </Routes>
     </Router>
   );
