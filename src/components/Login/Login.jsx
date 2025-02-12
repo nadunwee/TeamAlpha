@@ -36,7 +36,11 @@ const Login = () => {
         localStorage.setItem("teamName", data.name);
         localStorage.setItem("id", data.id);
 
-        navigate("/dashboard");
+        if (data.name === "Admin Access") {
+          navigate("/admin-dashboard");
+        } else {
+          navigate("/dashboard");
+        }
       } else {
         // Backend validation errors
         if (data.error === "Incorrect team name") {
