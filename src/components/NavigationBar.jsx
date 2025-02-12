@@ -10,7 +10,7 @@ const navigation = [
   { name: "home", href: "/" },
   { name: "about us", href: "/about-us" },
   {
-    name: "driving force", // The new Members dropdown
+    name: "driving force",
     subLinks: [
       { name: "racsliit board of officials", href: "/board-of-officials" },
       { name: "team alpha oc", href: "/driving-force" },
@@ -19,6 +19,7 @@ const navigation = [
   { name: "scavenger hunt", href: "/scavenger-hunt" },
   { name: "faq", href: "/faq" },
   { name: "contact us", href: "/contact-us" },
+  { name: "login", href: "/login" },
 ];
 
 const NavigationBar = () => {
