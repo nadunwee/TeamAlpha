@@ -16,6 +16,7 @@ const navigation = [
       { name: "team alpha oc", href: "/driving-force" },
     ],
   },
+  { name: "our partners", href: "/partners" },
   { name: "scavenger hunt", href: "/scavenger-hunt" },
   { name: "faq", href: "/faq" },
   { name: "contact us", href: "/contact-us" },
@@ -63,11 +64,15 @@ const NavigationBar = () => {
             <Bars3Icon aria-hidden="true" className="h-6 w-6" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12 font-assassin text-6xl">
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex lg:gap-x-8 font-assassin text-6xl items-center">
           {navigation.map((item) =>
             item.subLinks ? (
-              <div key={item.name} className="relative group mt-[-25px]">
-                <button className={`${navClass} text-[24px]`}>
+              <div key={item.name} className="relative group mt-[-22px]">
+                <button
+                  className={`${navClass} text-[24px] leading-none`}
+                  onClick={(e) => e.preventDefault()}
+                >
                   {item.name}
                 </button>
                 {/* Hover menu for desktop */}
@@ -79,13 +84,13 @@ const NavigationBar = () => {
                     duration: 0.4,
                     ease: "easeOut",
                   }}
-                  className="absolute left-0 hidden mt-0 space-y-2 bg-white p-4 text-black font-semibold rounded-lg shadow-lg group-hover:block w-[230px]"
+                  className="absolute left-0 hidden space-y-2 bg-white p-4 text-black font-semibold rounded-lg shadow-lg group-hover:block w-[230px]"
                 >
                   {item.subLinks.map((subItem) => (
                     <a
                       key={subItem.name}
                       href={subItem.href}
-                      className="block text-[20px] hover:text-gray-700 "
+                      className="block text-[20px] hover:text-gray-700"
                     >
                       {subItem.name}
                     </a>
@@ -96,17 +101,25 @@ const NavigationBar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className={`${navClass} text-[24px]`}
+                className={`${navClass} text-[24px] leading-none`}
               >
                 {item.name}
               </a>
             )
           )}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-10">
+          <a
+            href="/log-in"
+            className="text-[30px] font-semibold text-black font-assassin mt-[-4px]"
+            target="_self"
+            rel="noopener noreferrer"
+          >
+            login
+          </a>
           <a
             href="https://tripetto.app/run/3QUIZ3HBI8"
-            className="text-[30px] font-semibold text-black font-assassin"
+            className="text-[30px] font-semibold text-black font-assassin mt-[-4px]"
             target="_blank"
             rel="noopener noreferrer"
           >

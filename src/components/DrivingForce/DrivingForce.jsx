@@ -13,12 +13,13 @@ import manithHeadshot from "../../assets/manithHeadshot.jpg";
 import rishiniHeadshot from "../../assets/rishiniHeadshot.jpg";
 import sheniseHeadshot from "../../assets/sheniseHeadshot.jpg";
 import miyuniHeadshot from "../../assets/miyuniHeadshot.jpeg";
-import chelakaHeadshot from "../../assets/chelakaHeadshot.webp";
-import lakshiHeadshot from "../../assets/lakshiHeadshot.webp";
+import chelakaHeadshot from "../../assets/chelakaHeadshot.jpg";
+import lakshiHeadshot from "../../assets/lakshiHeadshot.jpg";
 import ranudiHeadshot from "../../assets/ranudiHeadshot.jpeg";
 import ImanHeadshot from "../../assets/ImanHeadshot.jpeg";
 import dindiHeadshot from "../../assets/dindiHeadshot.webp";
 import TharushimaHeadshot from "../../assets/TharushimaHeadshot.jpg";
+import nadaliHeadshot from "../../assets/nadaliHeadshot.jpeg";
 import Footer from "../Footer/Footer";
 
 const DrivingForce = () => {
@@ -103,6 +104,11 @@ const DrivingForce = () => {
         name: "Aftha",
         role: "Member",
         imageUrl: afthahHeadshot,
+      },
+      {
+        name: "Nadali",
+        role: "Member",
+        imageUrl: nadaliHeadshot,
       },
     ],
     "Participants Engagement and Experience": [
