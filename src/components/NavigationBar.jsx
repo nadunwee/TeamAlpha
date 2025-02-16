@@ -20,6 +20,7 @@ const navigation = [
   { name: "scavenger hunt", href: "/scavenger-hunt" },
   { name: "faq", href: "/faq" },
   { name: "contact us", href: "/contact-us" },
+  { name: "login", href: "/login" },
 ];
 
 const NavigationBar = () => {

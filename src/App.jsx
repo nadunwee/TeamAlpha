@@ -8,6 +8,9 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import FAQ from "./components/FAQ/FAQ";
 import ScavengerHunt from "./components/ScavengerHunt/ScavengerHunt";
 import Login from "./components/Login/Login";
+import Dashboard from "./components/Dashboard/Dashboard";
+import AdminDashboard from "./components/Dashboard/AdminDashboard";
+//nothing
 
 function App() {
   return (
@@ -21,7 +24,9 @@ function App() {
         <Route path="/scavenger-hunt" element={<ScavengerHunt />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/log-in" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
       </Routes>
     </Router>
   );
