@@ -10,6 +10,7 @@ import ScavengerHunt from "./components/ScavengerHunt/ScavengerHunt";
 import Login from "./components/Login/Login";
 import Dashboard from "./components/Dashboard/Dashboard";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
+//nothing
 
 function App() {
   return (
