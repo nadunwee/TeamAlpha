@@ -101,7 +101,7 @@ const DrivingForce = () => {
         imageUrl: hashiniHeadshot,
       },
       {
-        name: "Aftha",
+        name: "Afthah",
         role: "Member",
         imageUrl: afthahHeadshot,
       },

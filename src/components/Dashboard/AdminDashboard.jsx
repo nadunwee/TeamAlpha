@@ -16,8 +16,9 @@ const AdminDashboard = () => {
   // Check localStorage for ID on component mount
   useEffect(() => {
     const id = localStorage.getItem("id");
+    const name = localStorage.getItem("Admin Access");
 
-    if (!id) {
+    if (name !== "Admin Access") {
       navigate("/login");
     }
   }, [navigate]);
