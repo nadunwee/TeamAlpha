@@ -60,7 +60,7 @@ const Clues = ({ purchasedClues, coins, handlePurchase }) => {
   return (
     <div>
       <p className="mt-2 text-lg font-semibold tracking-tight text-yellow-400 text-center">
-        Clues
+        Scavenger Hunt
       </p>
       <p className="mt-2 max-w-lg text-sm/6 text-gray-400 text-center mb-6">
         Unlock secrets to aid your journey in the game.

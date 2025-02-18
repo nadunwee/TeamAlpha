@@ -68,21 +68,49 @@ const GamesAvailable = () => {
 
   return (
     <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)] bg-gradient-to-r from-gray-700 to-gray-900 shadow-2xl">
-      <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+      <div className="px-8 pt-10 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
         {/* Toggle Button */}
-        <div className="flex justify-center mb-4">
-          <button
-            onClick={() => setIsGames(!isGames)}
-            className="px-4 py-2 bg-yellow-500 text-black rounded-lg hover:bg-yellow-600"
-          >
-            {isGames ? "Show Clues" : "Show Games"}
-          </button>
+        <div className="flex justify-center items-center mb-4 gap-4">
+          <label className="relative inline-flex items-center cursor-pointer">
+            <input
+              type="checkbox"
+              className="sr-only peer"
+              checked={!isGames}
+              onChange={() => setIsGames(!isGames)}
+            />
+            <div className="w-44 h-12 bg-gray-600 rounded-full flex items-center px-4 peer-checked:bg-yellow-500 transition-all duration-300 relative overflow-hidden">
+              {/* Show Games (Visible when isGames is true) */}
+              <span
+                className={`font-[15px] text-white absolute left-14 transition-all duration-300 ${
+                  isGames ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                Show Clues
+              </span>
+
+              {/* Toggle button */}
+              <div
+                className={`w-10 h-10 bg-white rounded-full shadow-md absolute transition-transform duration-300 transform ${
+                  isGames ? "translate-x-[-10px]" : "translate-x-[116.4px]" // Move the toggle to the edge
+                }`}
+              ></div>
+
+              {/* Show Clues (Visible when isGames is false) */}
+              <span
+                className={`font-[15px] text-black absolute right-14 transition-all duration-300 ${
+                  !isGames ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                Show Games
+              </span>
+            </div>
+          </label>
         </div>
 
         {isGames ? (
           <>
             <p className="mt-2 text-lg font-semibold tracking-tight text-yellow-400 text-center">
-              Assassin's Creed Games
+              Games for the Day
             </p>
             <p className="mt-2 max-w-lg text-sm/6 text-gray-400 text-center mb-6">
               Immerse yourself in the world of ancient warriors. Earn rewards
