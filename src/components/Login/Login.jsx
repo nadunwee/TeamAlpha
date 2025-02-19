@@ -88,7 +88,7 @@ const Login = () => {
                 htmlFor="team_name"
                 className="block text-[25px] font-medium"
               >
-                user name
+                username
               </label>
               <div className="mt-2">
                 <input

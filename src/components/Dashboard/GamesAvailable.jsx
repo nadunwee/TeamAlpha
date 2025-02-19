@@ -12,10 +12,9 @@ const gamesList = [
   { name: "Ariel Rope ", cost: 0, maxCoins: 0 },
 ];
 
-const GamesAvailable = () => {
+const GamesAvailable = ({ coins }) => {
   const [isGames, setIsGames] = useState(true);
   const [purchasedClues, setPurchasedClues] = useState(0);
-  const [coins, setCoins] = useState(500);
   const gamesContainerRef = useRef(null);
 
   useEffect(() => {
@@ -24,9 +23,10 @@ const GamesAvailable = () => {
     }
   }, [isGames]);
 
-  const handlePurchase = async (clueIndex, clueName, cluePrice) => {
+  const handlePurchase = async (clueName, cluePrice) => {
+    console.log(clueName, clueName);
+
     if (coins >= cluePrice) {
-      setCoins(coins - cluePrice);
       await unlockClueAPI(cluePrice, clueName);
       setPurchasedClues(purchasedClues + 1);
     } else {
@@ -146,7 +146,6 @@ const GamesAvailable = () => {
         ) : (
           <Clues
             purchasedClues={purchasedClues}
-            coins={coins}
             handlePurchase={handlePurchase}
           />
         )}

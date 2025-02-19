@@ -99,7 +99,7 @@ const Dashboard = () => {
           <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
             <div className="relative lg:row-span-2">
               <div className="absolute inset-px rounded-lg bg-gray-700 lg:rounded-l-[2rem]"></div>
-              <GamesAvailable />
+              <GamesAvailable coins={teamData.coins} />
               <div className="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 lg:rounded-l-[2rem]"></div>
             </div>
 
@@ -107,7 +107,7 @@ const Dashboard = () => {
               <div className="absolute inset-px rounded-lg bg-gradient-to-r from-red-600 to-black shadow-lg max-lg:rounded-t-[2rem]"></div>
               <div className="relative flex h-full flex-col items-center justify-center overflow-hidden rounded-[calc(var(--radius-lg)+1px)] bg-gray-900 max-lg:rounded-t-[calc(2rem+1px)] p-6">
                 <p className="text-lg font-semibold tracking-tight text-gray-100 max-lg:text-center">
-                  Alphonics Available
+                  Alphonics Balance
                 </p>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="inline-block w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center shadow-md">

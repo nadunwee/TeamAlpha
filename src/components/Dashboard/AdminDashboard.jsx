@@ -10,15 +10,15 @@ const AdminDashboard = () => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
   const [updatedCoins, setUpdatedCoins] = useState(null); // Store updated coins
-  const operation = "credit";
+  const [operation, setOperation] = useState("credit");
   const navigate = useNavigate();
 
   // Check localStorage for ID on component mount
   useEffect(() => {
     const id = localStorage.getItem("id");
-    const name = localStorage.getItem("Admin Access");
+    const name = localStorage.getItem("teamName");
 
-    if (name !== "Admin Access") {
+    if (name !== "Admin Access" || !id) {
       navigate("/login");
     }
   }, [navigate]);
@@ -43,17 +43,19 @@ const AdminDashboard = () => {
 
       if (transactionResponse.status === 201) {
         // Update the team's coins
+
         const updateResponse = await axios.post(
           `${import.meta.env.VITE_BASE_URL}/api/team/update-coins`,
           {
             team_name: teamName,
             coins: parseInt(coins),
+            operation: operation,
           }
         );
 
         if (updateResponse.status === 200) {
           setSuccess(true);
-          setUpdatedCoins(updateResponse.data.coins); // Update coins in state
+          setUpdatedCoins(updateResponse.data.coins);
         }
       }
 
@@ -148,6 +150,26 @@ const AdminDashboard = () => {
                   required
                   disabled={isLoading}
                 />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="operation"
+                  className="block text-sm font-medium text-gray-300 mb-1.5 sm:mb-2"
+                >
+                  Operation Type
+                </label>
+                <select
+                  id="operation"
+                  value={operation}
+                  onChange={(e) => setOperation(e.target.value)}
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-600 border border-gray-500 rounded-lg shadow-sm focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-white placeholder-gray-400 text-sm sm:text-base outline-none"
+                  required
+                  disabled={isLoading}
+                >
+                  <option value="credit">Credit (Add Coins)</option>
+                  <option value="debit">Debit (Remove Coins)</option>
+                </select>
               </div>
 
               <div className="pt-2">
