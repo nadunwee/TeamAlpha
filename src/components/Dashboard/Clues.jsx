@@ -77,7 +77,7 @@ const Clues = ({ purchasedClues, coins, handlePurchase }) => {
       </div>
 
       {/* Display Purchased Clues */}
-      <div className="mt-6 space-y-4">
+      <div className="mt-6 space-y-4 max-h-[350px] overflow-y-auto">
         {unlockedClues.length > 0 ? (
           unlockedClues.map((clue, index) => (
             <div

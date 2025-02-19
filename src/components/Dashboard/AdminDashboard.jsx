@@ -117,7 +117,7 @@ const AdminDashboard = () => {
                   htmlFor="coins"
                   className="block text-sm font-medium text-gray-300 mb-1.5 sm:mb-2"
                 >
-                  Coins Amount
+                  Alphonics Top Up
                 </label>
                 <input
                   id="coins"
@@ -125,7 +125,7 @@ const AdminDashboard = () => {
                   value={coins}
                   onChange={(e) => setCoins(e.target.value)}
                   className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-600 border border-gray-500 rounded-lg shadow-sm focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-white placeholder-gray-400 text-sm sm:text-base outline-none"
-                  placeholder="Enter coins amount"
+                  placeholder="Enter Alphonics amount"
                   required
                   disabled={isLoading}
                 />
@@ -136,7 +136,7 @@ const AdminDashboard = () => {
                   htmlFor="gameName"
                   className="block text-sm font-medium text-gray-300 mb-1.5 sm:mb-2"
                 >
-                  Game Name
+                  Game Category
                 </label>
                 <input
                   id="gameName"
