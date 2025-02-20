@@ -10,7 +10,7 @@ const AdminDashboard = () => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
   const [updatedCoins, setUpdatedCoins] = useState(null); // Store updated coins
-  const [operation, setOperation] = useState("");
+  const [operation, setOperation] = useState("credit");
   const navigate = useNavigate();
 
   // Check localStorage for ID on component mount
@@ -43,17 +43,20 @@ const AdminDashboard = () => {
 
       if (transactionResponse.status === 201) {
         // Update the team's coins
+
         const updateResponse = await axios.post(
           `${import.meta.env.VITE_BASE_URL}/api/team/update-coins`,
           {
             team_name: teamName,
             coins: parseInt(coins),
             operation: operation,
+            operation: operation,
           }
         );
 
         if (updateResponse.status === 200) {
           setSuccess(true);
+          setUpdatedCoins(updateResponse.data.coins);
           setUpdatedCoins(updateResponse.data.coins);
         }
       }
@@ -118,7 +121,7 @@ const AdminDashboard = () => {
                   htmlFor="coins"
                   className="block text-sm font-medium text-gray-300 mb-1.5 sm:mb-2"
                 >
-                  Alphonics Top Up
+                  Alphonics Top Up Alphonics Top Up
                 </label>
                 <input
                   id="coins"
@@ -137,7 +140,7 @@ const AdminDashboard = () => {
                   htmlFor="gameName"
                   className="block text-sm font-medium text-gray-300 mb-1.5 sm:mb-2"
                 >
-                  Game Category
+                  Game Category Game Category
                 </label>
                 <input
                   id="gameName"

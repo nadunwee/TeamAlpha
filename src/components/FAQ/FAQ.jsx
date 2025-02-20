@@ -29,8 +29,7 @@ const FAQ = () => {
     },
     {
       question: "How many days is it?",
-      answer:
-        "This fun will extend beyond just one day. Having an overnight stay this will be carried for TWO amazingly fun filled days. ",
+      answer: "This event will take place for just ONE amazing fun-filled day.",
     },
     {
       question: "Where will it be held?",
@@ -40,7 +39,7 @@ const FAQ = () => {
     {
       question: "What is the approximate price for a head? ",
       answer:
-        "All of this GREAT fun for only a small amount of around LKR 4,000 - LKR 5,000.",
+        "All of this GREAT fun for only a small amount of around LKR 2500.",
     },
     {
       question: "Where can I find more information?",
@@ -66,11 +65,6 @@ const FAQ = () => {
       question: "What should I bring?",
       answer:
         "Basically EVERYTHING you need for two camping days including a bit of extra cash for emergencies (will include a checklist in the delegate handbook).",
-    },
-    {
-      question: "Where can we sleep?",
-      answer:
-        "Comfortable and safe tents will be provided from the Venue itself to provide you with the BEST OF THE BEST camping experience like nothing you’ve ever had. ",
     },
     {
       question: "Is the Internet there good",
