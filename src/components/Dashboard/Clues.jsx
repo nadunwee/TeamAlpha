@@ -6,7 +6,7 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
   const [clueModal, setClueModal] = useState(null);
   const [unlockedClues, setUnlockedClues] = useState([]); // To store unlocked clues
   const team_name = localStorage.getItem("teamName"); // Get the team name from localStorage
-  const [allCompleted, setAllCompleted] = useState(true);
+  const [allCompleted, setAllCompleted] = useState(false);
   const [password, setPassword] = useState("");
   const phoneNum = "0717439912";
 
