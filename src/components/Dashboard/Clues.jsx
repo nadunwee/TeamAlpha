@@ -10,6 +10,8 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
   const [password, setPassword] = useState("");
   const phoneNum = "0717439912";
 
+  console.log(unlockedClues);
+
   // Array containing objects with both the clue text and price
   const clues = [
     {
@@ -185,7 +187,7 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
             <p className="text-lg font-semibold text-yellow-400 mb-4">
               Purchase Clue {unlockedClues.length + 1}
             </p>
-            {unlockedClues.length === 8 ? (
+            {unlockedClues.length != 8 ? (
               <>
                 <p className="text-gray-400 mb-6">
                   Unlock clue {unlockedClues.length + 1} for{" "}
