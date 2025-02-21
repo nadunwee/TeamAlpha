@@ -151,7 +151,9 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
             transition={{ duration: 0.8 }}
             className="mt-6 bg-green-500 text-white p-6 rounded-lg shadow-lg"
           >
-            <p className="text-2xl font-bold">🎉 Congratulations! 🎉</p>
+            <p className="text-2xl font-bold">
+              LHL CTAEI GS DIOENLR, WIY ULO UEHT DI?
+            </p>
             <p className="text-3xl font-extrabold mt-4">{phoneNum}</p>
           </motion.div>
         </AnimatePresence>
