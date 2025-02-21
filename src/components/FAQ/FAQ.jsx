@@ -33,13 +33,12 @@ const FAQ = () => {
     },
     {
       question: "Where will it be held?",
-      answer:
-        "Let’s all Assemble at the CHE adventure park (location details will be provided). ",
+      answer: "Che Adventure Park Hanwella",
     },
     {
       question: "What is the approximate price for a head? ",
       answer:
-        "All of this GREAT fun for only a small amount of around LKR 2500.",
+        "All of this GREAT fun for only a small amount of around LKR 2000.",
     },
     {
       question: "Where can I find more information?",
@@ -72,7 +71,7 @@ const FAQ = () => {
     },
     {
       question: "When will it be held",
-      answer: "we're planning to hold this on 22nd of february 2025",
+      answer: "we're planning to hold this on 22nd of February 2025",
     },
     {
       question: "How fun will it be?",
