@@ -9,7 +9,7 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
   const [allCompleted, setAllCompleted] = useState(false);
   const [password, setPassword] = useState("");
   const [isPurchasing, setIsPurchasing] = useState(false);
-  const phoneNum = "0717439912";
+  const phoneNum = "0704083193";
 
   console.log(unlockedClues);
 
@@ -138,29 +138,12 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
           Purchase Clues
         </button>
       </div> */}
-      {allCompleted || unlockedClues.length === 9 ? (
-        <AnimatePresence>
-          <motion.div
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1.2, opacity: 1 }}
-            exit={{ scale: 0.5, opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mt-10 mb-10 bg-green-500 text-white p-6 rounded-lg shadow-lg"
-          >
-            <p className="text-2xl font-bold">
-              LHL CTAEI GS DIOENLR, WIY ULO UEHT DI?
-            </p>
-            <p className="text-3xl font-extrabold mt-4">{phoneNum}</p>
-          </motion.div>
-        </AnimatePresence>
-      ) : (
-        <button
-          onClick={() => setShowModal(true)}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-        >
-          Purchase Clues
-        </button>
-      )}
+      <button
+        onClick={() => setShowModal(true)}
+        className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+      >
+        Purchase Clues
+      </button>
 
       {/* Display Purchased Clues */}
       <div className="mt-6 space-y-4 max-h-[350px] overflow-y-auto">
@@ -216,7 +199,21 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
               </>
             ) : (
               <p className="text-gray-400 mb-6">
-                All clues have been purchased.
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1.2, opacity: 1 }}
+                    exit={{ scale: 0.5, opacity: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="mt-10 mb-10 ml-10 mr-10 bg-green-500 text-white p-6 rounded-lg shadow-lg"
+                  >
+                    <p className="text-sm font-bold">
+                      ETH DEREC SI NIGALCL, ILWL OUY DEHE TI?
+                    </p>
+                    <p className="text-sm">Hint : unravell the mistary</p>
+                    <p className="text-3xl font-extrabold mt-4">{phoneNum}</p>
+                  </motion.div>
+                </AnimatePresence>
               </p>
             )}
             <button
