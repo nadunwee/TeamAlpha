@@ -155,11 +155,6 @@ const BoardOfOfficials = () => {
         imageUrl: bishruHeadshot,
       },
       {
-        name: "Thisus",
-        role: "Director - Information Technology",
-        imageUrl: thisusHeadshot,
-      },
-      {
         name: "Muhammed",
         role: "Director - Public Relations",
         imageUrl: muhammedHeadshot,

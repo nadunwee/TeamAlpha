@@ -17,7 +17,6 @@ const navigation = [
     ],
   },
   { name: "our partners", href: "/partners" },
-  { name: "scavenger hunt", href: "/scavenger-hunt" },
   { name: "faq", href: "/faq" },
   { name: "contact us", href: "/contact-us" },
 ];
@@ -107,15 +106,23 @@ const NavigationBar = () => {
             )
           )}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-10">
           <a
+            href="/login"
+            className="text-[30px] font-semibold text-black font-assassin mt-[-4px]"
+            target="_self"
+            rel="noopener noreferrer"
+          >
+            login <span aria-hidden="true">&rarr;</span>
+          </a>
+          {/* <a
             href="https://tripetto.app/run/3QUIZ3HBI8"
             className="text-[30px] font-semibold text-black font-assassin mt-[-4px]"
             target="_blank"
             rel="noopener noreferrer"
           >
             register <span aria-hidden="true">&rarr;</span>
-          </a>
+          </a> */}
         </div>
       </nav>
 
