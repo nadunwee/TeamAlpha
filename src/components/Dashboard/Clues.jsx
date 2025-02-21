@@ -8,6 +8,7 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
   const team_name = localStorage.getItem("teamName"); // Get the team name from localStorage
   const [allCompleted, setAllCompleted] = useState(false);
   const [password, setPassword] = useState("");
+  const [isPurchasing, setIsPurchasing] = useState(false);
   const phoneNum = "0717439912";
 
   console.log(unlockedClues);
@@ -83,38 +84,44 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
   }, [team_name]);
 
   const handleCluePurchase = async (clueIndex) => {
+    if (isPurchasing) return; // Prevent duplicate calls
+    setIsPurchasing(true); // Disable button
+
     const clue = clues[clueIndex];
     if (clueIndex === 0) {
-      await handlePurchase(clue.clue, clue.price); // Pass the clue name and price to the API
+      await handlePurchase(clue.clue, clue.price);
     } else if (clueIndex > 0) {
+      console.log(clueIndex);
+
       switch (password) {
-        case "123":
+        case "123" && clueIndex === 1:
           await handlePurchase(clues[1].clue, clues[1].price);
           break;
-        case "456":
+        case "456" && clueIndex === 2:
           await handlePurchase(clues[2].clue, clues[2].price);
           break;
-        case "789":
+        case "789" && clueIndex === 3:
           await handlePurchase(clues[3].clue, clues[3].price);
           break;
-        case "101112":
+        case "101112" && clueIndex === 4:
           await handlePurchase(clues[4].clue, clues[4].price);
           break;
-        case "131415":
+        case "131415" && clueIndex === 5:
           await handlePurchase(clues[5].clue, clues[5].price);
           break;
-        case "161718":
+        case "161718" && clueIndex === 6:
           await handlePurchase(clues[6].clue, clues[6].price);
           break;
-        case "42309098":
+        case "42309098" && clueIndex === 7:
           await handlePurchase(clues[7].clue, clues[7].price);
           break;
-        case "800":
+        case "800" && clueIndex === 8:
           await handlePurchase(clues[8].clue, clues[8].price);
           setAllCompleted(true);
           break;
         default:
-          alert("Incorrect password in switch.");
+          alert("Incorrect password for the clue.");
+          window.location.reload();
           break;
       }
     }
@@ -206,8 +213,11 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
                 <button
                   onClick={() => handleCluePurchase(unlockedClues.length)}
                   className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+                  disabled={isPurchasing}
                 >
-                  Purchase Clue {unlockedClues.length + 1}
+                  {isPurchasing
+                    ? "Processing..."
+                    : `Purchase Clue ${unlockedClues.length + 1}`}
                 </button>
               </>
             ) : (

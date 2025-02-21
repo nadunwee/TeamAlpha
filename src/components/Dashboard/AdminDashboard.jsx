@@ -50,7 +50,6 @@ const AdminDashboard = () => {
             team_name: teamName,
             coins: parseInt(coins),
             operation: operation,
-            operation: operation,
           }
         );
 
@@ -121,7 +120,7 @@ const AdminDashboard = () => {
                   htmlFor="coins"
                   className="block text-sm font-medium text-gray-300 mb-1.5 sm:mb-2"
                 >
-                  Alphonics Top Up Alphonics Top Up
+                  Enter Alphonics Amount
                 </label>
                 <input
                   id="coins"
@@ -129,7 +128,7 @@ const AdminDashboard = () => {
                   value={coins}
                   onChange={(e) => setCoins(e.target.value)}
                   className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-600 border border-gray-500 rounded-lg shadow-sm focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-white placeholder-gray-400 text-sm sm:text-base outline-none"
-                  placeholder="Enter Alphonics amount"
+                  placeholder="Enter amount"
                   required
                   disabled={isLoading}
                 />
@@ -140,7 +139,7 @@ const AdminDashboard = () => {
                   htmlFor="gameName"
                   className="block text-sm font-medium text-gray-300 mb-1.5 sm:mb-2"
                 >
-                  Game Category Game Category
+                  Game Category
                 </label>
                 <input
                   id="gameName"
@@ -148,7 +147,7 @@ const AdminDashboard = () => {
                   value={gameName}
                   onChange={(e) => setGameName(e.target.value)}
                   className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-600 border border-gray-500 rounded-lg shadow-sm focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 text-white placeholder-gray-400 text-sm sm:text-base outline-none"
-                  placeholder="Enter game name"
+                  placeholder="Enter transaction name"
                   required
                   disabled={isLoading}
                 />
