@@ -91,38 +91,23 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
     if (clueIndex === 0) {
       await handlePurchase(clue.clue, clue.price);
     } else if (clueIndex > 0) {
-      console.log(clueIndex);
+      console.log(clueIndex, password);
 
-      switch (password) {
-        case "123" && clueIndex === 1:
-          await handlePurchase(clues[1].clue, clues[1].price);
-          break;
-        case "456" && clueIndex === 2:
-          await handlePurchase(clues[2].clue, clues[2].price);
-          break;
-        case "789" && clueIndex === 3:
-          await handlePurchase(clues[3].clue, clues[3].price);
-          break;
-        case "101112" && clueIndex === 4:
-          await handlePurchase(clues[4].clue, clues[4].price);
-          break;
-        case "131415" && clueIndex === 5:
-          await handlePurchase(clues[5].clue, clues[5].price);
-          break;
-        case "161718" && clueIndex === 6:
-          await handlePurchase(clues[6].clue, clues[6].price);
-          break;
-        case "42309098" && clueIndex === 7:
-          await handlePurchase(clues[7].clue, clues[7].price);
-          break;
-        case "800" && clueIndex === 8:
-          await handlePurchase(clues[8].clue, clues[8].price);
-          setAllCompleted(true);
-          break;
-        default:
-          alert("Incorrect password for the clue.");
-          window.location.reload();
-          break;
+      if (
+        (password === "123" && clueIndex === 1) ||
+        (password === "456" && clueIndex === 2) ||
+        (password === "789" && clueIndex === 3) ||
+        (password === "101112" && clueIndex === 4) ||
+        (password === "131415" && clueIndex === 5) ||
+        (password === "161718" && clueIndex === 6) ||
+        (password === "42309098" && clueIndex === 7) ||
+        (password === "800" && clueIndex === 8)
+      ) {
+        await handlePurchase(clues[clueIndex].clue, clues[clueIndex].price);
+        if (clueIndex === 8) setAllCompleted(true);
+      } else {
+        alert("Incorrect password for the clue.");
+        window.location.reload();
       }
     }
     setShowModal(false); // Close the modal after purchase
