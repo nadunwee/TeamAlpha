@@ -104,7 +104,7 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
         (password === "800" && clueIndex === 8)
       ) {
         await handlePurchase(clues[clueIndex].clue, clues[clueIndex].price);
-        if (clueIndex === 8) setAllCompleted(true);
+        if (clueIndex === 7) setAllCompleted(true);
       } else {
         alert("Incorrect password for the clue.");
         window.location.reload();
