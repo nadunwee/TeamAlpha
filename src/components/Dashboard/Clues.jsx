@@ -226,7 +226,10 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
               </p>
             )}
             <button
-              onClick={() => setShowModal(false)}
+              onClick={() => {
+                setShowModal(false);
+                setIsPurchasing(false);
+              }}
               className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 mt-4 ml-4"
             >
               Close
