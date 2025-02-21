@@ -100,8 +100,8 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
         (password === "101112" && clueIndex === 4) ||
         (password === "131415" && clueIndex === 5) ||
         (password === "161718" && clueIndex === 6) ||
-        (password === "42309098" && clueIndex === 7) ||
-        (password === "800" && clueIndex === 8)
+        (password === "42309098" && clueIndex === 7)
+        // (password === "800" && clueIndex === 8)
       ) {
         await handlePurchase(clues[clueIndex].clue, clues[clueIndex].price);
         if (clueIndex === 7) setAllCompleted(true);
