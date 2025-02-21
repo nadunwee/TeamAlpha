@@ -88,6 +88,8 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
     setIsPurchasing(true); // Disable button
 
     const clue = clues[clueIndex];
+    console.log(clue);
+
     if (clueIndex === 0) {
       await handlePurchase(clue.clue, clue.price);
     } else if (clueIndex > 0) {
@@ -100,11 +102,11 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
         (password === "101112" && clueIndex === 4) ||
         (password === "131415" && clueIndex === 5) ||
         (password === "161718" && clueIndex === 6) ||
-        (password === "42309098" && clueIndex === 7)
-        // (password === "800" && clueIndex === 8)
+        (password === "42309098" && clueIndex === 7) ||
+        (password === "800" && clueIndex === 8)
       ) {
         await handlePurchase(clues[clueIndex].clue, clues[clueIndex].price);
-        if (clueIndex === 7) setAllCompleted(true);
+        setAllCompleted(clueIndex === 7);
       } else {
         alert("Incorrect password for the clue.");
         window.location.reload();
@@ -112,6 +114,8 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
     }
     setShowModal(false); // Close the modal after purchase
   };
+
+  console.log(allCompleted);
 
   return (
     <div>
@@ -131,7 +135,7 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
           Purchase Clues
         </button>
       </div> */}
-      {!allCompleted ? (
+      {!allCompleted && unlockedClues.length !== 8 ? (
         <button
           onClick={() => setShowModal(true)}
           className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
