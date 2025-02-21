@@ -213,7 +213,7 @@ const NavigationBar = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      register
+                      login
                     </a>
                   </div>
                 </div>
