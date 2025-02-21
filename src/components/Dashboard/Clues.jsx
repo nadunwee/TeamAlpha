@@ -103,10 +103,13 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
         (password === "131415" && clueIndex === 5) ||
         (password === "161718" && clueIndex === 6) ||
         (password === "42309098" && clueIndex === 7) ||
-        (password === "800" && clueIndex === 8)
+        (password === "e3lsd0" && clueIndex === 8)
       ) {
         await handlePurchase(clues[clueIndex].clue, clues[clueIndex].price);
-        setAllCompleted(clueIndex === 7);
+        if (password === "e3lsd0" && clueIndex === 8) {
+          setAllCompleted(true); // Trigger special message
+          window.location.reload();
+        }
       } else {
         alert("Incorrect password for the clue.");
         window.location.reload();
@@ -135,21 +138,14 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
           Purchase Clues
         </button>
       </div> */}
-      {!allCompleted && unlockedClues.length !== 8 ? (
-        <button
-          onClick={() => setShowModal(true)}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-        >
-          Purchase Clues
-        </button>
-      ) : (
+      {allCompleted || unlockedClues.length === 9 ? (
         <AnimatePresence>
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1.2, opacity: 1 }}
             exit={{ scale: 0.5, opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-6 bg-green-500 text-white p-6 rounded-lg shadow-lg"
+            className="mt-10 mb-10 bg-green-500 text-white p-6 rounded-lg shadow-lg"
           >
             <p className="text-2xl font-bold">
               LHL CTAEI GS DIOENLR, WIY ULO UEHT DI?
@@ -157,6 +153,13 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
             <p className="text-3xl font-extrabold mt-4">{phoneNum}</p>
           </motion.div>
         </AnimatePresence>
+      ) : (
+        <button
+          onClick={() => setShowModal(true)}
+          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+        >
+          Purchase Clues
+        </button>
       )}
 
       {/* Display Purchased Clues */}
@@ -185,7 +188,7 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
             <p className="text-lg font-semibold text-yellow-400 mb-4">
               Purchase Clue {unlockedClues.length + 1}
             </p>
-            {unlockedClues.length != 8 ? (
+            {unlockedClues.length != 9 ? (
               <>
                 <p className="text-gray-400 mb-6">
                   Unlock clue {unlockedClues.length + 1} for{" "}

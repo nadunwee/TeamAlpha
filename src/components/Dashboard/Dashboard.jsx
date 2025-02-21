@@ -146,7 +146,9 @@ const Dashboard = () => {
                           >
                             <div>
                               <p className="text-gray-100 font-medium">
-                                {item.game_name || "Unknown Game"}
+                                {(item.game_name?.length > 25
+                                  ? item.game_name.slice(0, 25) + "..."
+                                  : item.game_name) || "Unknown Game"}
                               </p>
                               <p className="text-gray-300 text-sm">
                                 {item.operation === "credit" && "Coins Earned"}
