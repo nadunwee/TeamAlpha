@@ -32,7 +32,7 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
       price: 360,
     },
     {
-      clue: "Round and bright, like the morning sun, \n Short in height, but full of fun, \n Curly locks that dance with cheer, \n A fair glow that shines so clear",
+      clue: "Round and bright, like the morning sun, \n Short in height, but full of fun, \n Curly locks that dance with cheer, \n A light tan that shines so clear",
       price: 420,
     },
     {
