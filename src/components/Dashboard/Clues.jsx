@@ -96,14 +96,14 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
       console.log(clueIndex, password);
 
       if (
-        (password === "123" && clueIndex === 1) ||
-        (password === "456" && clueIndex === 2) ||
-        (password === "789" && clueIndex === 3) ||
-        (password === "101112" && clueIndex === 4) ||
-        (password === "131415" && clueIndex === 5) ||
-        (password === "161718" && clueIndex === 6) ||
-        (password === "42309098" && clueIndex === 7) ||
-        (password === "e3lsd0" && clueIndex === 8)
+        (password === "ooh69" && clueIndex === 1) ||
+        (password === "forkmepls" && clueIndex === 2) ||
+        (password === "lickit" && clueIndex === 3) ||
+        (password === "daddy420" && clueIndex === 4) ||
+        (password === "uwugasm" && clueIndex === 5) ||
+        (password === "hotnready" && clueIndex === 6) ||
+        (password === "tac0s4u" && clueIndex === 7) ||
+        (password === "touche69" && clueIndex === 8)
       ) {
         await handlePurchase(clues[clueIndex].clue, clues[clueIndex].price);
         if (password === "e3lsd0" && clueIndex === 8) {
@@ -201,17 +201,21 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
               <p className="text-gray-400 mb-6">
                 <AnimatePresence>
                   <motion.div
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    animate={{ scale: 1.2, opacity: 1 }}
-                    exit={{ scale: 0.5, opacity: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="mt-10 mb-10 ml-10 mr-10 bg-green-500 text-white p-6 rounded-lg shadow-lg"
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.8, opacity: 0 }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    className="max-w-md mx-auto bg-gray-800 text-white p-6 rounded-xl shadow-lg text-center border border-yellow-400"
                   >
-                    <p className="text-sm font-bold">
+                    <p className="text-sm font-bold text-yellow-400 uppercase tracking-wide">
                       ETH DEREC SI NIGALCL, ILWL OUY DEHE TI?
                     </p>
-                    <p className="text-sm">Hint : unravell the mistary</p>
-                    <p className="text-3xl font-extrabold mt-4">{phoneNum}</p>
+                    <p className="text-sm text-gray-300 mt-2">
+                      Hint: Unravel the mystery
+                    </p>
+                    <p className="text-3xl font-extrabold mt-4 text-white">
+                      {phoneNum}
+                    </p>
                   </motion.div>
                 </AnimatePresence>
               </p>
