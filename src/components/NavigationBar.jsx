@@ -208,7 +208,7 @@ const NavigationBar = () => {
                   </div>
                   <div className="py-6">
                     <a
-                      href="https://tripetto.app/run/3QUIZ3HBI8"
+                      href="/login"
                       className="-mx-3 block rounded-lg px-3 py-2.5 font-semibold text-gray-300 hover:bg-gray-700 font-assassin text-[25px]"
                       target="_blank"
                       rel="noopener noreferrer"

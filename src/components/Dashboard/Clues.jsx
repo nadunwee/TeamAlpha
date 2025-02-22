@@ -9,7 +9,7 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
   const [allCompleted, setAllCompleted] = useState(false);
   const [password, setPassword] = useState("");
   const [isPurchasing, setIsPurchasing] = useState(false);
-  const phoneNum = "0704083193";
+  const phoneNum = "076 930 7308";
 
   console.log(unlockedClues);
 
@@ -48,7 +48,7 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
       price: 500,
     },
     {
-      clue: "All Clues Completed",
+      clue: "Purchase one last time",
       price: 800,
     },
   ];
@@ -207,11 +207,14 @@ const Clues = ({ purchasedClues, handlePurchase }) => {
                     transition={{ duration: 0.6, ease: "easeInOut" }}
                     className="max-w-md mx-auto bg-gray-800 text-white p-6 rounded-xl shadow-lg text-center border border-yellow-400"
                   >
+                    <p className="text-sm font-bold uppercase tracking-wide">
+                      unravel the below mistary and call the number
+                    </p>
                     <p className="text-sm font-bold text-yellow-400 uppercase tracking-wide">
                       ETH DEREC SI NIGALCL, ILWL OUY DEHE TI?
                     </p>
                     <p className="text-sm text-gray-300 mt-2">
-                      Hint: Unravel the mystery
+                      Hint: Home is the place, where your perfect answer awaits.
                     </p>
                     <p className="text-3xl font-extrabold mt-4 text-white">
                       {phoneNum}

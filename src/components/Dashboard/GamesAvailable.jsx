@@ -9,7 +9,7 @@ const gamesList = [
   { name: "Problem Solving", cost: 100, maxCoins: 150 },
   { name: "Team building", cost: 70, maxCoins: 120 },
   { name: "Rafting", cost: 140, maxCoins: 250 },
-  { name: "Ariel Rope ", cost: 0, maxCoins: 0 },
+  { name: "Ariel Rope ", cost: 140, maxCoins: 250 },
 ];
 
 const GamesAvailable = ({ coins }) => {
